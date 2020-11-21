@@ -27,7 +27,7 @@
 | category_id       | integer    | null: false                    |
 | transportation_id | integer    | null: false                    |
 | prefecture_id     | integer    | null: false                    |
-| time_id           | integer    | null: false                    |
+| duration_id       | integer    | null: false                    |
 | price             | integer    | null: false                    |
 | user              | references | null: false, foreign_key: true |
 
