@@ -5,10 +5,10 @@
   </header>
   <div class="items-sell-main">
     <h2 class="items-sell-title">サービスの情報を入力</h2>
-    <%= form_with local: true do |f| %>
+    <%= form_with model: @service, url:services_path, local: true do |f| %>
 
     <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
-    <%# render 'shared/error_messages', model: f.object %>
+    <%= render 'shared/error_messages', model: f.object %>
     <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
 
     <%# 出品画像 %>
@@ -51,11 +51,6 @@
           <span class="indispensable">必須</span>
         </div>
         <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
-        <div class="weight-bold-text">
-          商品の状態
-          <span class="indispensable">必須</span>
-        </div>
-        <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"item-sales-status"}) %>
       </div>
     </div>
     <%# /商品の詳細 %>
@@ -63,7 +58,7 @@
     <%# 配送について %>
     <div class="items-detail">
       <div class="weight-bold-text question-text">
-        <span>配送について</span>
+        <span>作業内容について</span>
         <a class="question" href="#">?</a>
       </div>
       <div class="form">

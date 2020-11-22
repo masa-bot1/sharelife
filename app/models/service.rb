@@ -19,7 +19,7 @@ class Service < ApplicationRecord
   with_options numericality: { other_than: 1 } do
     validates :category_id
     validates :transportation_id
-    validates :deration_id
+    validates :duration_id
   end
 
   validates :prefecture_id, numericality: { other_than: 0 }
