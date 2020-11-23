@@ -22,5 +22,4 @@ class ServicesController < ApplicationController
   def service_params
     params.require(:service).permit(:name, :description, :category_id, :transportation_id, :prefecture_id, :duration_id, :price, :image).merge(user_id: current_user.id)
   end
-  
 end
