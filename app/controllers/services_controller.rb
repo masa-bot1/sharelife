@@ -1,5 +1,5 @@
 class ServicesController < ApplicationController
-  before_action :authenticate_user!, only: :new
+  before_action :authenticate_user!, only: [:new, :edit]
 
   def index
     @services = Service.includes(:user).order('created_at DESC')
@@ -24,6 +24,16 @@ class ServicesController < ApplicationController
 
   def edit
     @service = Service.find(params[:id])
+    redirect_to action: :index unless current_user.id == @service.user_id
+  end
+
+  def update
+    @service = Service.find(params[:id])
+    if @service.update(service_params)
+      redirect_to service_path(@service.id), method: :get
+    else
+      render :edit
+    end
   end
 
   private
