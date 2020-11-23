@@ -18,6 +18,10 @@ class ServicesController < ApplicationController
     end
   end
 
+  def show
+    @service = Service.find(params[:id])
+  end
+
   private
 
   def service_params
