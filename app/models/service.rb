@@ -7,6 +7,7 @@ class Service < ApplicationRecord
 
   belongs_to :user
   has_one_attached :image
+  has_one :order
 
   with_options presence: true do
     validates :image
