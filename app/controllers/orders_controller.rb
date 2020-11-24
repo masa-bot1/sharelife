@@ -1,8 +1,10 @@
 class OrdersController < ApplicationController
   before_action :set_service, only: [:index, :create]
+  before_action :authenticate_user!, only: :index
 
   def index
     @user_order = UserOrder.new
+    redirect_to root_path if current_user.id == @service.user_id || @service.order.present?
   end
 
   def create
