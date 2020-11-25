@@ -68,6 +68,5 @@ RSpec.describe UserOrder, type: :model do
       @user_order.valid?
       expect(@user_order.errors.full_messages).to include("Token can't be blank")
     end
-
   end
 end

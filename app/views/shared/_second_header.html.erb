@@ -1,0 +1,28 @@
+<%# CSS・・・assets/stylesheets/shared/header.css %>
+<header class='top-page-header'>
+  <h1>
+    サービス検索
+  </h1>
+  <%= search_form_for @p, url: search_services_path do |f| %>
+    <%= f.label :name_eq, 'カテゴリー:' %>
+    <%= f.collection_select :category_id_eq, Category.all, :id, :name, include_blank: '指定なし' %>
+    <br>
+    <%= f.label :name_eq, '居住地:' %>
+    <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name, include_blank: '指定なし' %>
+    <br>
+    <%= f.label :name_eq, '交通費:' %>
+    <%= f.collection_select :transportation_id_eq, Transportation.all, :id, :name, include_blank: '指定なし' %>
+    <br>
+    <%= f.label :price, '価格：' %>
+    <%= f.radio_button :price_lteq, '' %>
+    指定なし
+    <%= f.radio_button :price_lteq, '1000' %>
+    1000円以下
+    <%= f.radio_button :price_lteq, '2500' %>
+    2500円以下
+    <%= f.radio_button :price_lteq, '5000' %>
+    5000円以下
+    <br>
+    <%= f.submit '検索' %>
+  <% end %>
+</header>
