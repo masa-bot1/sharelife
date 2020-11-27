@@ -1,0 +1,104 @@
+<%= render "shared/header" %>
+
+  <div class='item-contents'>
+    <h2 class='title'>出品サービス一覧（<%= @services.length %>件）</h2>
+    <ul class='item-lists'>
+      <% @services.each do |service| %>
+        <li class='list'>
+          <%= link_to service_path(service.id) do %>
+            <div class='item-img-content'>
+              <%= image_tag service.image, class: "item-img" %>
+                <% if service.order.present? %>
+                  <div class='sold-out'>
+                    <span>Sold Out!!</span>
+                  </div>
+                <% end %>
+            </div>
+            <div class='item-info'>
+              <h3 class='item-name'>
+                <%= service.name %>
+              </h3>
+              <div class='item-price'>
+                <span>
+                  <%= service.price %>円<br>
+                  <%= service.category.name %><br>
+                  <%= service.transportation.name %>
+                </span>
+                <div class='star-btn'>
+                  <%= image_tag "star.png", class:"star-icon" %>
+                  <span class='star-count'>0</span>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </li>
+      <% end %>
+      <%# 商品がない場合のダミー %>
+      <% if @services.length == 0 %>
+        <li class='list'>
+          <%= link_to '#' do %>
+          <%= image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/10/a004.png", class: "item-img" %>
+          <div class='item-info'>
+            <h3 class='item-name'>
+              商品を出品してね！
+            </h3>
+            <div class='item-price'>
+              <span>99999999円<br>(税込み)</span>
+              <div class='star-btn'>
+                <%= image_tag "star.png", class:"star-icon" %>
+                <span class='star-count'>0</span>
+              </div>
+            </div>
+          </div>
+          <% end %>
+        </li>
+      <% end %>
+      <%# /商品がない場合のダミー %>
+    </ul>
+  </div>
+
+<%# 商品の概要 %>
+<div class="item-show">
+  <div class="item-box">
+    <h2 class="name">
+      <%= @user.nickname %>
+    </h2>
+    <div class="option">
+      <div class="favorite-btn">
+        <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
+        <span>お気に入り 0</span>
+      </div>
+      <div class="report-btn">
+        <%= image_tag "flag.png" ,class:"report-flag-icon" ,width:"20",height:"20"%>
+        <span>不適切な商品の通報</span>
+      </div>
+    </div>
+  </div>
+  <%# /商品の概要 %>
+
+  <div class="comment-box">
+    <form>
+      <textarea class="comment-text"></textarea>
+      <p class="comment-warn">
+        相手のことを考え丁寧なコメントを心がけましょう。
+        <br>
+        不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      </p>
+      <button type="submit" class="comment-btn">
+        <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
+        <span>コメントする<span>
+      </button>
+    </form>
+  </div>
+  <div class="links">
+    <a href="#" class="change-item-btn">
+      ＜ 前の商品
+    </a>
+    <a href="#" class="change-item-btn">
+      後ろの商品 ＞
+    </a>
+  </div>
+  <a href="#" class='another-item'><%= "商品のカテゴリー名" %>をもっと見る</a>
+</div>
+
+<%= render "shared/footer" %>
