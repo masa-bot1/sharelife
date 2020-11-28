@@ -237,6 +237,22 @@ a {
   font-weight: bold;
 }
 
+.category-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.category-lists>.list {
+  display: block;
+  border: solid 3px #6091d3;/*線*/
+  border-radius: 10px;/*角の丸み*/
+  padding: 1vw;
+  margin: 1vw;
+}
+
 .item-lists {
   width: 100vw;
   display: flex;
