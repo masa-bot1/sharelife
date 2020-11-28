@@ -3,7 +3,8 @@ class ServicesController < ApplicationController
   before_action :search_service, only: [:index, :search]
 
   def index
-    @services = Service.includes(:user).order('created_at DESC')
+    @services = Service.includes(:user).order('created_at DESC').limit(4)
+    @categories = Category.all.drop(1)
   end
 
   def new
@@ -45,6 +46,10 @@ class ServicesController < ApplicationController
 
   def search
     @results = @p.result.includes(:user)  # 検索条件にマッチした商品の情報を取得
+  end
+
+  def select_category_index
+    @services = Service.where(category_id: params[:id])
   end
 
   private
