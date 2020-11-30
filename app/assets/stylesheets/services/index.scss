@@ -224,16 +224,15 @@ a {
 }
 
 .item-contents>.title {
-  font-size: 5vh;
+  font-size: 3vh;
   line-height: 1.4;
   font-weight: bold;
 }
 
 .item-contents>.subtitle {
-  font-size: 3vh;
+  font-size: 4vh;
   margin: 1vh 0;
   text-decoration: none;
-  color: #3ccace;
   font-weight: bold;
 }
 
@@ -274,6 +273,11 @@ a {
 .item-img {
   width: 33vh;
   height: 33vh;
+}
+
+.logo-img {
+  width: 5vh;
+  height: 5vh;
 }
 
 .sold-out {

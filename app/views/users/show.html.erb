@@ -1,15 +1,17 @@
 <%= render "shared/header" %>
 
-<% if @orders.length >= 3 %>
-  ゴールド
-<% elsif @orders.length >= 2 %>
-  シルバー
-<% elsif @orders.length >= 1 %>
-  ブロンズ
-<% end %>
-
   <div class='item-contents'>
-    <h2 class='title'><%= @user.nickname %><br>
+    <h2 class='title'><%= @user.nickname %>
+    <% if @orders.length >= 3 %>
+      <%= image_tag "gold-96.png", class:"logo-img" %>
+      ゴールド
+    <% elsif @orders.length >= 2 %>
+      <%= image_tag "silver-96.png", class:"logo-img" %>
+      シルバー
+    <% elsif @orders.length >= 1 %>
+      <%= image_tag "bronze-96.png", class:"logo-img" %>
+      ブロンズ
+    <% end %><br>
     販売実績（<%= @orders.length %>件）<br>
     出品サービス（<%= @services.length %>件）</h2>
     <ul class='item-lists'>
@@ -30,7 +32,7 @@
               </h3>
               <div class='item-price'>
                 <span>
-                  <%= service.price %>円<br>
+                  <%= service.price.to_s( :delimited) %>円<br>
                   <%= service.category.name %><br>
                   <%= service.transportation.name %><br>
                   <%= service.user.nickname %>
