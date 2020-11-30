@@ -46,7 +46,7 @@
       <tbody>
         <tr>
           <th class="detail-item">出品者</th>
-          <td class="detail-value"><%= @service.user.nickname %></td>
+          <td class="detail-value"><%= link_to @service.user.nickname, "/users/#{@service.user.id}" %></td>
         </tr>
         <tr>
           <th class="detail-item">カテゴリー</th>
