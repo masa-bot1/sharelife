@@ -3,8 +3,9 @@ class ServicesController < ApplicationController
   before_action :search_service, only: [:index, :search]
 
   def index
-    @services = Service.includes(:user).order('created_at DESC')
+    @services = Service.includes(:user).order('created_at DESC').limit(5)
     @categories = Category.all.drop(1)
+    @users = User.all.order('created_at DESC')
   end
 
   def new
