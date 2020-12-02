@@ -1,19 +1,50 @@
 <%= render "shared/header" %>
 
+<div class="main">
+  <div class="inner">
+    <div class="user__wrapper">
+      <h2 class="page-heading">
+        <%= "#{@user.nickname}さんのプロフィール"%>
+      </h2>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th class="table__col1">ニックネーム</th>
+            <td class="table__col2"><%= @user.nickname %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">ランク</th>
+            <td class="table__col2">
+              <% if @orders.length >= 3 %>
+                <%= image_tag "gold-96.png", class:"logo-img" %>
+                ゴールド
+              <% elsif @orders.length >= 2 %>
+                <%= image_tag "silver-96.png", class:"logo-img" %>
+                シルバー
+              <% elsif @orders.length >= 1 %>
+                <%= image_tag "bronze-96.png", class:"logo-img" %>
+                ブロンズ
+              <% else %>
+                ノーマル
+              <% end %>
+            </td>
+          </tr>
+          <tr>
+            <th class="table__col1">得意カテゴリ</th>
+            <td class="table__col2"><%= @user.category.name %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">販売実績</th>
+            <td class="table__col2"><%= @orders.length %>件</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
   <div class='item-contents'>
-    <h2 class='title'><%= @user.nickname %>
-    <% if @orders.length >= 3 %>
-      <%= image_tag "gold-96.png", class:"logo-img" %>
-      ゴールド
-    <% elsif @orders.length >= 2 %>
-      <%= image_tag "silver-96.png", class:"logo-img" %>
-      シルバー
-    <% elsif @orders.length >= 1 %>
-      <%= image_tag "bronze-96.png", class:"logo-img" %>
-      ブロンズ
-    <% end %><br>
-    販売実績（<%= @orders.length %>件）<br>
-    出品サービス（<%= @services.length %>件）</h2>
+    <h2 class='title'>出品サービス（<%= @services.length %>件）</h2>
     <ul class='item-lists'>
       <% @services.each do |service| %>
         <li class='list'>
@@ -69,46 +100,3 @@
       <%# /商品がない場合のダミー %>
     </ul>
   </div>
-
-<%# 商品の概要 %>
-<div class="item-show">
-  <div class="item-box">
-    <div class="option">
-      <div class="favorite-btn">
-        <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
-        <span>お気に入り 0</span>
-      </div>
-      <div class="report-btn">
-        <%= image_tag "flag.png" ,class:"report-flag-icon" ,width:"20",height:"20"%>
-        <span>不適切な商品の通報</span>
-      </div>
-    </div>
-  </div>
-  <%# /商品の概要 %>
-
-  <div class="comment-box">
-    <form>
-      <textarea class="comment-text"></textarea>
-      <p class="comment-warn">
-        相手のことを考え丁寧なコメントを心がけましょう。
-        <br>
-        不快な言葉遣いなどは利用制限や退会処分となることがあります。
-      </p>
-      <button type="submit" class="comment-btn">
-        <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
-        <span>コメントする<span>
-      </button>
-    </form>
-  </div>
-  <div class="links">
-    <a href="#" class="change-item-btn">
-      ＜ 前の商品
-    </a>
-    <a href="#" class="change-item-btn">
-      後ろの商品 ＞
-    </a>
-  </div>
-  <a href="#" class='another-item'><%= "商品のカテゴリー名" %>をもっと見る</a>
-</div>
-
-<%= render "shared/footer" %>

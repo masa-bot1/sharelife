@@ -88,6 +88,13 @@
     <p class='info-text'>※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。</p>
   </div>
   <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">得意カテゴリ</label>
+      <span class="form-any">任意</span>
+    </div>
+    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+  </div>
+  <div class="form-group">
     <h2 class='form-bottom-text'>
       「会員登録」のボタンを押すことにより、
       <span>利用規約</span>
@@ -97,7 +104,6 @@
   <div class='register-btn'>
     <%= f.submit "会員登録" ,class:"register-red-btn" %>
   </div>
-  <p class='register-info'>本人情報の登録について</p>
 </div>
 <% end %>
 

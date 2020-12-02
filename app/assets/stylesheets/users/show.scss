@@ -1,0 +1,63 @@
+.main {
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.inner {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.page-heading {
+  font-size: 30px;
+  margin-bottom: 28px;
+}
+
+/* ユーザーページ */
+
+.table{
+  border-collapse: collapse;
+  margin-bottom: 32px;
+  width: 50%;
+}
+.table__col1{
+  text-align: left;
+  font-weight: bold;
+  background: #fafafa;
+  border-collapse: collapse;
+  border: 1px solid #f5f5f5;
+  width: 30%;
+  padding: 8px;
+}
+.table__col2{
+  text-align: left;
+  border: 1px solid #f5f5f5;
+  border-collapse: collapse;
+  width: 70%;
+  padding: 16px 8px;
+}
+
+/* タブレット対応 */
+@media (max-width: 1024px) {
+  .inner {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .page-heading {
+    font-size: 24px;
+  }
+}
+
+ /* スマホ表示 */
+@media (max-width: 599px) {
+  .page-heading {
+    font-size: 20px;
+  }
+  .table{
+    width: 100%;
+  }
+}
