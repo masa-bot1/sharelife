@@ -15,9 +15,20 @@
   align-items: center;
 }
 
+.icon {
+  display: flex;
+  align-items: center;
+}
+
 .furima-icon {
   width: 5vw;
-  margin-right: 10vw;
+  margin-right: 1vw;
+}
+
+.icon-name {
+  width: 10vw;
+  color: black;
+  font-family: "Helvetica Neue", sans-serif;
 }
 
 .search-form {
@@ -25,6 +36,7 @@
   height: 5vh;
   display: flex;
   margin-bottom: 5px;
+  margin-left: 10vw;
 }
 
 .search-form>.input-box {
