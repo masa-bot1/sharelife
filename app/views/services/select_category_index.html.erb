@@ -1,34 +1,42 @@
 <%= render "shared/header" %>
   <%# 商品一覧 %>
   <div class='item-contents'>
-    <h2 class="subtitle" >カテゴリ別サービス</h2>
+    <h2 class="subtitle" >
+    <% if @service.present?%>
+      <%= @service.category.name %>
+    <% else %>
+      現在出品中のサービスはありません。
+    <% end %>
+    </h2>
     <ul class='item-lists'>
       <% @services.each do |service| %>
-        <li class='list'>
-          <%= link_to service_path(service.id) do %>
-            <div class='item-img-content'>
-              <%= image_tag service.image, class: "item-img" %>
-                <% if service.order.present? %>
-                  <div class='sold-out'>
-                    <span>Sold Out!!</span>
-                  </div>
-                <% end %>
-            </div>
-            <div class='item-info'>
-              <h3 class='item-name'>
-                <%= service.name %>
-              </h3>
-              <div class='item-price'>
-                <span>
-                  <%= service.user.nickname %>
-                </span>
+        <% unless service.order.present? %>
+          <li class='list'>
+            <%= link_to service_path(service.id) do %>
+              <div class='item-img-content'>
+                <%= image_tag service.image, class: "item-img" %>
+                  <% if service.order.present? %>
+                    <div class='sold-out'>
+                      <span>Sold Out!!</span>
+                    </div>
+                  <% end %>
+              </div>
+              <div class='item-info'>
+                <h3 class='item-name'>
+                  <%= service.name %>
+                </h3>
                 <div class='item-price'>
-                  <span><%= service.price.to_s( :delimited) %>円</span>
+                  <span>
+                    <%= service.user.nickname %>
+                  </span>
+                  <div class='item-price'>
+                    <span><%= service.price.to_s( :delimited) %>円</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          <% end %>
-        </li>
+            <% end %>
+          </li>
+        <% end %>
       <% end %>
       <%# 商品がない場合のダミー %>
       <% if @services.length == 0 %>
@@ -37,7 +45,7 @@
           <%= image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/10/a004.png", class: "item-img" %>
           <div class='item-info'>
             <h3 class='item-name'>
-              商品を出品してね！
+              サービスを出品してね！
             </h3>
             <div class='item-price'>
               <span>99999999円<br>(税込み)</span>

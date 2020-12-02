@@ -51,6 +51,7 @@ class ServicesController < ApplicationController
 
   def select_category_index
     @services = Service.where(category_id: params[:id])
+    @service = Service.where(category_id: params[:id]).first
   end
 
   private
