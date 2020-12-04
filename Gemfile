@@ -64,3 +64,4 @@ gem 'active_hash'
 gem 'payjp'
 gem 'ransack'
 gem 'kaminari'
+gem "jquery-rails"

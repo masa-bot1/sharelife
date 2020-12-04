@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root to: 'services#index'
   resources :services do
     resources :orders, only: [:index, :create]
+    resources :likes, only: [:create, :destroy]
     collection do
       get 'search'
     end

@@ -9,6 +9,11 @@ class User < ApplicationRecord
 
   has_many :services
   has_many :orders
+  has_many :likes, dependent: :destroy
+  has_many :liked_services, through: :likes, source: :service
+  def already_liked?(service)
+    self.likes.exists?(service_id: service.id)
+  end
 
   validates :email, uniqueness: true
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze

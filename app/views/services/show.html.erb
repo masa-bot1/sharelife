@@ -71,10 +71,25 @@
         <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
         <span>お気に入り 0</span>
       </div>
+        
       <div class="report-btn">
         <%= image_tag "flag.png" ,class:"report-flag-icon" ,width:"20",height:"20"%>
         <span>不適切な商品の通報</span>
       </div>
+      <div>
+        <h3>いいね件数: <%= @service.likes.count %></h3>
+          <% if current_user %>
+            <% if current_user.already_liked?(@service) %>
+              <%= button_to 'いいねを取り消す', service_like_path(@service), method: :delete %>
+            <% else %>
+              <%= button_to 'いいね', service_likes_path(@service) %>
+            <% end %>
+          <% end %>
+          <h2>いいねしたユーザー</h2>
+          <% @service.liked_users.each do |user| %>
+            <li><%= user.nickname %></li>
+          <% end %>
+        </div>
     </div>
   </div>
   <%# /商品の概要 %>

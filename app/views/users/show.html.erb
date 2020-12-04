@@ -39,6 +39,11 @@
           </tr>
         </tbody>
       </table>
+      <h3>いいねしている投稿</h3>
+      <% @user.liked_services.each do |service| %>
+        <%= service.user.nickname %>
+        <%= service.name %>
+      <% end %>
     </div>
   </div>
 </div>

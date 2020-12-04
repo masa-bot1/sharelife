@@ -23,6 +23,7 @@ class ServicesController < ApplicationController
 
   def show
     @service = Service.find(params[:id])
+    @like = Like.new
   end
 
   def edit
