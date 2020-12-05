@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   root to: 'services#index'
   resources :services do
     resources :orders, only: [:index, :create]
-    resources :likes, only: [:create, :destroy]
     collection do
       get 'search'
     end
@@ -14,4 +13,6 @@ Rails.application.routes.draw do
     end
   end
   resources :users, only: [:show, :update]
+  post   '/like/:service_id' => 'likes#like',   as: 'like'
+  delete '/like/:service_id' => 'likes#unlike', as: 'unlike'
 end

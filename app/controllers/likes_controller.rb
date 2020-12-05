@@ -1,12 +1,20 @@
 class LikesController < ApplicationController
-  def create
-    @like = current_user.likes.create(service_id: params[:service_id])
-    redirect_back(fallback_location: root_path)
+  before_action :set_variables
+
+  def like
+    like = current_user.likes.new(service_id: @service.id)
+    like.save
   end
 
-  def destroy
-    @like = Like.find_by(service_id: params[:service_id], user_id: current_user.id)
-    @like.destroy
-    redirect_back(fallback_location: root_path)
+  def unlike
+    like = current_user.likes.find_by(service_id: @service.id)
+    like.destroy
+  end
+
+  private
+
+  def set_variables
+    @service = Service.find(params[:service_id])
+    @id_name = "#like-link-#{@service.id}"
   end
 end

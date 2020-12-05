@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_04_020444) do
+ActiveRecord::Schema.define(version: 2020_12_04_134723) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -47,12 +47,10 @@ ActiveRecord::Schema.define(version: 2020_12_04_020444) do
   end
 
   create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "service_id", null: false
-    t.bigint "user_id", null: false
+    t.integer "service_id"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["service_id"], name: "index_likes_on_service_id"
-    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -75,6 +73,7 @@ ActiveRecord::Schema.define(version: 2020_12_04_020444) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "likes_count"
     t.index ["user_id"], name: "index_services_on_user_id"
   end
 
@@ -99,8 +98,6 @@ ActiveRecord::Schema.define(version: 2020_12_04_020444) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "addresses", "orders"
-  add_foreign_key "likes", "services"
-  add_foreign_key "likes", "users"
   add_foreign_key "orders", "services"
   add_foreign_key "orders", "users"
   add_foreign_key "services", "users"
