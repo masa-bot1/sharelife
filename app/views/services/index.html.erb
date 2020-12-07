@@ -51,7 +51,8 @@
                 </h3>
                 <div class='item-price'>
                   <span>
-                    <%= service.user.nickname %>
+                    <%= service.user.nickname %><br>
+                    <%= render partial: 'services/services',locals: {service: service} %>
                   </span>
                   <div class='item-price'>
                     <span><%= service.price.to_s( :delimited) %>円</span>

@@ -3,7 +3,7 @@ class ServicesController < ApplicationController
   before_action :search_service, only: [:index, :search]
 
   def index
-    @services = Service.includes(:user).order('created_at DESC').limit(5)
+    @services = Service.includes(:user).order('created_at DESC')
     @categories = Category.all.drop(1)
     @users = User.all.order('created_at DESC')
   end
@@ -23,6 +23,7 @@ class ServicesController < ApplicationController
 
   def show
     @service = Service.find(params[:id])
+    @like = Like.new
   end
 
   def edit
@@ -51,6 +52,7 @@ class ServicesController < ApplicationController
 
   def select_category_index
     @services = Service.where(category_id: params[:id])
+    @service = Service.where(category_id: params[:id]).first
   end
 
   private

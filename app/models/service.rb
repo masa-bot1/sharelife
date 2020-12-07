@@ -8,6 +8,8 @@ class Service < ApplicationRecord
   belongs_to :user
   has_one_attached :image
   has_one :order
+  has_many :likes, dependent: :destroy
+  has_many :liking_users, through: :likes, source: :user
 
   with_options presence: true do
     validates :image
