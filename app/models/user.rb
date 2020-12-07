@@ -24,4 +24,5 @@ class User < ApplicationRecord
     validates :first_name_kana, format: { with: /\A[ァ-ヶー－]+\z/ }
     validates :birthday
   end
+  validates :category_id, numericality: { other_than: 1 }
 end

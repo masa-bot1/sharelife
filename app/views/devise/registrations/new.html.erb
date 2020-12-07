@@ -90,7 +90,7 @@
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">得意カテゴリ</label>
-      <span class="form-any">任意</span>
+      <span class="indispensable">必須</span>
     </div>
     <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
   </div>
@@ -106,5 +106,3 @@
   </div>
 </div>
 <% end %>
-
-<%= render "shared/second-footer"%>

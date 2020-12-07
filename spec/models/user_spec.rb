@@ -132,6 +132,12 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include("Birthday can't be blank")
       end
+
+      it 'categoryを選択していないと保存できないこと' do
+        @user.category_id = 1
+        @user.valid?
+        expect(@user.errors.full_messages).to include('Category must be other than 1')
+      end
     end
   end
 end
