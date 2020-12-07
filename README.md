@@ -64,3 +64,15 @@
 ### Association
 
 - belongs_to :order
+
+## likes テーブル
+
+| Column     | Type     | Options |
+| ---------- | -------- | ------- |
+| user_id    | integer  |         |
+| service_id | integer  |         |
+
+### Association
+
+- belongs_to :user
+- belongs_to :service
