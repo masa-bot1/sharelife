@@ -49,6 +49,9 @@
 # 使用技術（開発環境）
 HTML・CSS・Ruby・Ruby on Rails・JavaScript・GitHub・jquery
 
+# ER図URL
+https://gyazo.com/b29c4e0b87661dd00faab0ce4db7c8a3
+
 # テーブル設計
 
 ## users テーブル
