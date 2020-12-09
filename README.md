@@ -1,13 +1,32 @@
-# アプリケーション名
+# アプリ名
 
-## SHARELIFE
+### SHARELIFE
 
-# アプリケーション概要
+# 概要
 ユーザーが掃除などの家事をフリマのようにサービスとして出品したり、購入出来るアプリケーション。
 
-# URL
+# 本番環境
 
-# テスト用アカウント
+### URL
+https://sharelife-22949.herokuapp.com/
+
+### テスト用アカウント
+購入者用
+
+
+- メールアドレス: :ken@com
+- パスワード: kenken1
+
+
+購入用カード情報
+- 番号：4242424242424242
+- 期限：3月23年
+- セキュリティコード：123
+
+
+出品者用
+- メールアドレス名: tom@com
+- パスワード: tomtom1
 
 # 利用方法
 ① 新規登録（登録済ならログイン）
@@ -20,15 +39,25 @@
 一人暮らしのサラリーマンやOLさんなど、仕事で忙しく家事まで手が回らない人が、気軽に家事を頼むために開発
 
 # DEMO
-## トップページ
-https://gyazo.com/2acb310014961b4495b39e9c830fb1b4
+### トップページ
+[![Image from Gyazo](https://i.gyazo.com/2acb310014961b4495b39e9c830fb1b4.gif)](https://gyazo.com/2acb310014961b4495b39e9c830fb1b4)
 
-## 新規登録画面
+### 新規登録画面
 
-## ユーザー詳細画面
+[![Image from Gyazo](https://i.gyazo.com/714611a73a7616f7455fb34d9cecd2af.gif)](https://gyazo.com/714611a73a7616f7455fb34d9cecd2af)
 
-## いいね機能
+### 出品画面
+[![Image from Gyazo](https://i.gyazo.com/49676d313cfebae9c18aaff8354c3a97.gif)](https://gyazo.com/49676d313cfebae9c18aaff8354c3a97)
 
+### 購入画面
+[![Image from Gyazo](https://i.gyazo.com/a4a31e7a15a78f49b3708f0b6b5382f5.gif)](https://gyazo.com/a4a31e7a15a78f49b3708f0b6b5382f5)
+
+### ユーザー詳細画面
+[![Image from Gyazo](https://i.gyazo.com/dd65536194ad18b1b730a0202937770e.gif)](https://gyazo.com/dd65536194ad18b1b730a0202937770e)
+
+### いいね機能
+
+[![Image from Gyazo](https://i.gyazo.com/d341a8e6651bf4ab328675ca18d0eabd.gif)](https://gyazo.com/d341a8e6651bf4ab328675ca18d0eabd)
 
 # 洗い出した要件
 - ユーザー管理機能
@@ -40,28 +69,41 @@ https://gyazo.com/2acb310014961b4495b39e9c830fb1b4
 - フォロー・フォロワー機能
 - 一覧スライド表示機能
 
-# 実装した機能についてのGIFと説明
-- カテゴリー別検索機能
-カテゴリーをクリックすると、そのカテゴリーのサービスが表示される
+# 工夫したポイント
+- 欲しいサービスを探しやすくするため、トップページからカテゴリ別に検索できるようにした。
+- 出品者のサービスの質の判断材料として、出品者の販売実績とランク付けを実装した。
 
-- いいね機能
-ログインしたユーザーが、気に入ったサービスに「いいね」をつけることが出来る
+# 使用技術（開発環境）
+## バックエンド
+Ruby、Ruby on Rails
 
-# 実装予定の機能
+## フロントエンド
+HTML,CSS,JavaScript,JQuery
+
+## データベース
+MySQL,SequelPro
+
+## ソース管理
+GitHub,GitHubDesktop
+
+## テスト
+RSpec
+
+## エディタ
+VSCode
+
+# 課題や今後実装したい機能
+## 課題
+- 見た目を整える必要がある。
+- ユーザーの販売実績がトップページで見れない。
+
+## 今後実装したい機能
 - ユーザー詳細表示、編集・削除機能
 - フォロー・フォロワー機能
 - 一覧スライド表示機能
 
-# 工夫したポイント
-- 欲しいサービスを探しやすくするため、トップページからカテゴリ別に検索できるようにした。
-
-- 出品者のサービスの質の判断材料として、出品者の販売実績とランク付けを実装した。
-
-# 使用技術（開発環境）
-HTML・CSS・Ruby・Ruby on Rails・JavaScript・GitHub・jquery
-
-# ER図URL
-https://gyazo.com/b29c4e0b87661dd00faab0ce4db7c8a3
+# ER図
+[![Image from Gyazo](https://i.gyazo.com/9cd67920eaddca7b12e20a56b2a578a3.png)](https://gyazo.com/9cd67920eaddca7b12e20a56b2a578a3)
 
 # テーブル設計
 
