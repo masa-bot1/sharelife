@@ -1,16 +1,16 @@
 # アプリ名
 
-## SHARELIFE
+### SHARELIFE
 
 # 概要
 ユーザーが掃除などの家事をフリマのようにサービスとして出品したり、購入出来るアプリケーション。
 
 # 本番環境
 
-## URL
+### URL
 https://sharelife-22949.herokuapp.com/
 
-## テスト用アカウント
+### テスト用アカウント
 購入者用
 
 
@@ -39,17 +39,21 @@ https://sharelife-22949.herokuapp.com/
 一人暮らしのサラリーマンやOLさんなど、仕事で忙しく家事まで手が回らない人が、気軽に家事を頼むために開発
 
 # DEMO
-## トップページ
+### トップページ
 https://gyazo.com/2acb310014961b4495b39e9c830fb1b4
 
-## 新規登録画面
+### 新規登録画面
 https://gyazo.com/7cb0b2000c29e9896d7a8b6aa59d03cb
 
-## ユーザー詳細画面
+[![Image from Gyazo](https://i.gyazo.com/7cb0b2000c29e9896d7a8b6aa59d03cb.gif)](https://gyazo.com/7cb0b2000c29e9896d7a8b6aa59d03cb)
+
+### ユーザー詳細画面
 https://gyazo.com/dd65536194ad18b1b730a0202937770e
 
-## いいね機能
+### いいね機能
 https://gyazo.com/d341a8e6651bf4ab328675ca18d0eabd
+
+[![Image from Gyazo](https://i.gyazo.com/d341a8e6651bf4ab328675ca18d0eabd.gif)](https://gyazo.com/d341a8e6651bf4ab328675ca18d0eabd)
 
 # 洗い出した要件
 - ユーザー管理機能
