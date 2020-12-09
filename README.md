@@ -40,18 +40,22 @@ https://sharelife-22949.herokuapp.com/
 
 # DEMO
 ### トップページ
-https://gyazo.com/2acb310014961b4495b39e9c830fb1b4
+[![Image from Gyazo](https://i.gyazo.com/2acb310014961b4495b39e9c830fb1b4.gif)](https://gyazo.com/2acb310014961b4495b39e9c830fb1b4)
 
 ### 新規登録画面
-https://gyazo.com/7cb0b2000c29e9896d7a8b6aa59d03cb
 
-[![Image from Gyazo](https://i.gyazo.com/7cb0b2000c29e9896d7a8b6aa59d03cb.gif)](https://gyazo.com/7cb0b2000c29e9896d7a8b6aa59d03cb)
+[![Image from Gyazo](https://i.gyazo.com/714611a73a7616f7455fb34d9cecd2af.gif)](https://gyazo.com/714611a73a7616f7455fb34d9cecd2af)
+
+### 出品画面
+[![Image from Gyazo](https://i.gyazo.com/49676d313cfebae9c18aaff8354c3a97.gif)](https://gyazo.com/49676d313cfebae9c18aaff8354c3a97)
+
+### 購入画面
+[![Image from Gyazo](https://i.gyazo.com/a4a31e7a15a78f49b3708f0b6b5382f5.gif)](https://gyazo.com/a4a31e7a15a78f49b3708f0b6b5382f5)
 
 ### ユーザー詳細画面
-https://gyazo.com/dd65536194ad18b1b730a0202937770e
+[![Image from Gyazo](https://i.gyazo.com/dd65536194ad18b1b730a0202937770e.gif)](https://gyazo.com/dd65536194ad18b1b730a0202937770e)
 
 ### いいね機能
-https://gyazo.com/d341a8e6651bf4ab328675ca18d0eabd
 
 [![Image from Gyazo](https://i.gyazo.com/d341a8e6651bf4ab328675ca18d0eabd.gif)](https://gyazo.com/d341a8e6651bf4ab328675ca18d0eabd)
 
@@ -79,12 +83,6 @@ HTML,CSS,JavaScript,JQuery
 ## データベース
 MySQL,SequelPro
 
-## インフラ
-
-## Webサーバ（本番環境）
-
-## アプリケーションサーバ（本番環境）
-
 ## ソース管理
 GitHub,GitHubDesktop
 
@@ -104,8 +102,8 @@ VSCode
 - フォロー・フォロワー機能
 - 一覧スライド表示機能
 
-# ER図URL
-https://gyazo.com/b29c4e0b87661dd00faab0ce4db7c8a3
+# ER図
+[![Image from Gyazo](https://i.gyazo.com/9cd67920eaddca7b12e20a56b2a578a3.png)](https://gyazo.com/9cd67920eaddca7b12e20a56b2a578a3)
 
 # テーブル設計
 
