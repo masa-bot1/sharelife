@@ -12,7 +12,7 @@ Rails.application.routes.draw do
       get 'select_category_index'
     end
   end
-  resources :users, only: [:show, :update]
+  resources :users, only: [:show, :edit, :update]
   post   '/like/:service_id' => 'likes#like',   as: 'like'
   delete '/like/:service_id' => 'likes#unlike', as: 'unlike'
 end
