@@ -5,17 +5,22 @@ class UsersController < ApplicationController
     @orders = Order.where(service_id: @services)
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
   def update
-    if current_user.update(user_params) # 更新出来たかを条件分岐する
-      redirect_to root_path # 更新できたらrootパスへ
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      redirect_to "show"
     else
-      redirect_to "show" # 失敗すれば再度マイページへ
+      render :edit
     end
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:nickname, :email) # 編集出来る情報を制限
+    params.require(:user).permit(:nickname, :first_name, :last_name, :first_name_kana, :last_name_kana, :birthday, :category_id) # 編集出来る情報を制限
   end
 end
