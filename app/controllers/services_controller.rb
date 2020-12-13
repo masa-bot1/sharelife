@@ -51,7 +51,7 @@ class ServicesController < ApplicationController
   end
 
   def select_category_index
-    @services = Service.where(category_id: params[:id])
+    @services = Service.where(category_id: params[:id]).includes(:user)
     @service = Service.where(category_id: params[:id]).first
   end
 
