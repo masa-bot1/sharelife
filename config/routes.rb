@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'top/index'
   get 'users/show'
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   root to: 'services#index'
   resources :services do
     resources :orders, only: [:index, :create]

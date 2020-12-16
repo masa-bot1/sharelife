@@ -14,9 +14,9 @@ class User < ApplicationRecord
 
   validates :email, uniqueness: true
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
-  validates :password, format: { with: PASSWORD_REGEX }
+  validates :password, format: { with: PASSWORD_REGEX }, on: :create
   with_options presence: true do
-    validates :password_confirmation
+    validates :password_confirmation, on: :create
     validates :nickname
     validates :last_name,       format: { with: /\A[ぁ-んァ-ン一-龥]+\z/ }
     validates :first_name,      format: { with: /\A[ぁ-んァ-ン一-龥]+\z/ }
