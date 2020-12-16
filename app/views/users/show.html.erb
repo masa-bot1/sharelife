@@ -43,39 +43,43 @@
   </div>
 </div>
 
-  <div class='item-contents'>
-    <h2 class='title'>出品サービス（<%= @services.length %>件）</h2>
-    <ul class='item-lists'>
-      <% @services.each do |service| %>
-        <li class='list'>
-          <%= link_to service_path(service.id) do %>
-            <div class='item-img-content'>
-              <%= image_tag service.image, class: "item-img" %>
-                <% if service.order.present? %>
-                  <div class='sold-out'>
-                    <span>Sold Out!!</span>
-                  </div>
-                <% end %>
-            </div>
-            <div class='item-info'>
-              <h3 class='item-name'>
-                <%= service.name %>
-              </h3>
-              <div class='item-price'>
-                <span>
-                  <%= service.price.to_s( :delimited) %>円<br>
-                  <%= service.category.name %><br>
-                  <%= service.transportation.name %><br>
-                  <%= service.user.nickname %>
-                </span>
-                <div class='star-btn'>
-                  <%= image_tag "star.png", class:"star-icon" %>
-                  <span class='star-count'>0</span>
+<div class="service-edit">
+  <%= link_to '編集', edit_user_registration_path, method: :get, class: "service-edit-btn" %>
+</div>
+
+<div class='item-contents'>
+  <h2 class='title'>出品サービス（<%= @services.length %>件）</h2>
+  <ul class='item-lists'>
+    <% @services.each do |service| %>
+      <li class='list'>
+        <%= link_to service_path(service.id) do %>
+          <div class='item-img-content'>
+            <%= image_tag service.image, class: "item-img" %>
+              <% if service.order.present? %>
+                <div class='sold-out'>
+                  <span>Sold Out!!</span>
                 </div>
+              <% end %>
+          </div>
+          <div class='item-info'>
+            <h3 class='item-name'>
+              <%= service.name %>
+            </h3>
+            <div class='item-price'>
+              <span>
+                <%= service.price.to_s( :delimited) %>円<br>
+                <%= service.category.name %><br>
+                <%= service.transportation.name %><br>
+                <%= service.user.nickname %>
+              </span>
+              <div class='star-btn'>
+                <%= image_tag "star.png", class:"star-icon" %>
+                <span class='star-count'>0</span>
               </div>
             </div>
-          <% end %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
+          </div>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
