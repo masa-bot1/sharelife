@@ -44,7 +44,9 @@
 </div>
 
 <div class="service-edit">
-  <%= link_to '編集', edit_user_registration_path, method: :get, class: "service-edit-btn" %>
+  <% if user_signed_in? %>
+    <%= link_to '編集', edit_user_registration_path, method: :get, class: "service-edit-btn" %>
+  <% end %>
 </div>
 
 <div class='item-contents'>
