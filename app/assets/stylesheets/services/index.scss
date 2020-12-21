@@ -95,7 +95,8 @@ a:hover {
 .item-lists {
   width: 100vw;
   display: flex;
-  flex-wrap: wrap;
+  overflow-x: scroll;
+  white-space: nowrap;
   justify-content: center;
 }
 
