@@ -8,7 +8,7 @@
 # 本番環境
 
 ### URL
-https://sharelife-22949.herokuapp.com/
+http://54.168.91.44
 
 ### テスト用アカウント
 購入者用
