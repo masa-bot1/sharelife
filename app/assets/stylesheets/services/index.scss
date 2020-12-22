@@ -93,11 +93,11 @@ a:hover {
 }
 
 .item-lists {
-  width: 100vw;
+  width: 90vw;
   display: flex;
   overflow-x: scroll;
   white-space: nowrap;
-  justify-content: center;
+  justify-content: left;
 }
 
 .item-lists>.list {
