@@ -51,7 +51,6 @@ http://54.168.91.44
 [![Image from Gyazo](https://i.gyazo.com/6644f674f4a34ff302579513349ab5a1.gif)](https://gyazo.com/6644f674f4a34ff302579513349ab5a1)
 
 ### 新規登録画面
-
 [![Image from Gyazo](https://i.gyazo.com/714611a73a7616f7455fb34d9cecd2af.gif)](https://gyazo.com/714611a73a7616f7455fb34d9cecd2af)
 
 ### 出品画面
