@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
   <%# 商品一覧 %>
-  <div class='item-contents'>
+  <div class='select-category-contents'>
     <h2 class="subtitle" >
     <% if @service.present?%>
       <%= @service.category.name %>
@@ -8,18 +8,13 @@
       現在出品中のサービスはありません。
     <% end %>
     </h2>
-    <ul class='item-lists'>
+    <ul class='item-category-lists'>
       <% @services.each do |service| %>
         <% unless service.order.present? %>
           <li class='list'>
             <%= link_to service_path(service.id) do %>
               <div class='item-img-content'>
                 <%= image_tag service.image, class: "item-img" %>
-                  <% if service.order.present? %>
-                    <div class='sold-out'>
-                      <span>Sold Out!!</span>
-                    </div>
-                  <% end %>
               </div>
               <div class='item-info'>
                 <h3 class='item-name'>
