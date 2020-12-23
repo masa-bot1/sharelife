@@ -45,7 +45,7 @@ http://54.168.91.44
 
 # DEMO
 ### トップページ
-[![Image from Gyazo](https://i.gyazo.com/76f5b7218742f30ac9c7a81d109abfc3.gif)](https://gyazo.com/76f5b7218742f30ac9c7a81d109abfc3)
+[![Image from Gyazo](https://i.gyazo.com/28b68a800e20c7ae9c2c8060cc4493ff.gif)](https://gyazo.com/28b68a800e20c7ae9c2c8060cc4493ff)
 
 ### カテゴリ別検索機能
 [![Image from Gyazo](https://i.gyazo.com/6644f674f4a34ff302579513349ab5a1.gif)](https://gyazo.com/6644f674f4a34ff302579513349ab5a1)
