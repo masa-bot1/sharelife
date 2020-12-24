@@ -85,7 +85,6 @@
                     date_separator: '%s'),
                   "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
     </div>
-    <p class='info-text'>※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。</p>
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
@@ -93,13 +92,6 @@
       <span class="indispensable">必須</span>
     </div>
     <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
-  </div>
-  <div class="form-group">
-    <h2 class='form-bottom-text'>
-      「会員登録」のボタンを押すことにより、
-      <span>利用規約</span>
-      <br>に同意したものとみなします
-    </h2>
   </div>
   <div class='register-btn'>
     <%= f.submit "会員登録" ,class:"register-red-btn" %>
