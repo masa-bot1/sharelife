@@ -63,9 +63,6 @@ http://54.168.91.44
 ### ユーザー詳細ページ
 [![Image from Gyazo](https://i.gyazo.com/4211f7ca669755dee735c888a0ad85a6.gif)](https://gyazo.com/4211f7ca669755dee735c888a0ad85a6)
 
-### ユーザー編集機能
-[![Image from Gyazo](https://i.gyazo.com/438a553400c2a5b099dbd4c43b2bd90b.gif)](https://gyazo.com/438a553400c2a5b099dbd4c43b2bd90b)
-
 ### いいね機能
 [![Image from Gyazo](https://i.gyazo.com/98ed0e32d2a206f341c5843d07d81c52.gif)](https://gyazo.com/98ed0e32d2a206f341c5843d07d81c52)
 
