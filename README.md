@@ -45,25 +45,28 @@ http://54.168.91.44
 
 # DEMO
 ### トップページ
-[![Image from Gyazo](https://i.gyazo.com/28b68a800e20c7ae9c2c8060cc4493ff.gif)](https://gyazo.com/28b68a800e20c7ae9c2c8060cc4493ff)
+[![Image from Gyazo](https://i.gyazo.com/e7028dc7ffec3ea876bb7291bbc4479a.gif)](https://gyazo.com/e7028dc7ffec3ea876bb7291bbc4479a)
 
 ### カテゴリ別検索機能
-[![Image from Gyazo](https://i.gyazo.com/6644f674f4a34ff302579513349ab5a1.gif)](https://gyazo.com/6644f674f4a34ff302579513349ab5a1)
+[![Image from Gyazo](https://i.gyazo.com/751a6424f9758e9af477b520b7ff2e1d.gif)](https://gyazo.com/751a6424f9758e9af477b520b7ff2e1d)
 
 ### 新規登録画面
-[![Image from Gyazo](https://i.gyazo.com/714611a73a7616f7455fb34d9cecd2af.gif)](https://gyazo.com/714611a73a7616f7455fb34d9cecd2af)
+[![Image from Gyazo](https://i.gyazo.com/2df3e334cfae555cd37fa2bebc69ef7a.gif)](https://gyazo.com/2df3e334cfae555cd37fa2bebc69ef7a)
 
 ### 出品画面
-[![Image from Gyazo](https://i.gyazo.com/49676d313cfebae9c18aaff8354c3a97.gif)](https://gyazo.com/49676d313cfebae9c18aaff8354c3a97)
+[![Image from Gyazo](https://i.gyazo.com/01d4fbe933e937b7832024adb6fc2109.gif)](https://gyazo.com/01d4fbe933e937b7832024adb6fc2109)
 
 ### 購入画面
-[![Image from Gyazo](https://i.gyazo.com/a4a31e7a15a78f49b3708f0b6b5382f5.gif)](https://gyazo.com/a4a31e7a15a78f49b3708f0b6b5382f5)
+[![Image from Gyazo](https://i.gyazo.com/d910bbc384f824edd81987a43b4ed716.gif)](https://gyazo.com/d910bbc384f824edd81987a43b4ed716)
 
 ### ユーザー詳細ページ
-[![Image from Gyazo](https://i.gyazo.com/4211f7ca669755dee735c888a0ad85a6.gif)](https://gyazo.com/4211f7ca669755dee735c888a0ad85a6)
+[![Image from Gyazo](https://i.gyazo.com/0927342ad679008cc68d861fc63cfc2a.gif)](https://gyazo.com/0927342ad679008cc68d861fc63cfc2a)
+
+### ユーザー編集機能
+[![Image from Gyazo](https://i.gyazo.com/085c09ea0756bd37660c632e46151ce0.gif)](https://gyazo.com/085c09ea0756bd37660c632e46151ce0)
 
 ### いいね機能
-[![Image from Gyazo](https://i.gyazo.com/98ed0e32d2a206f341c5843d07d81c52.gif)](https://gyazo.com/98ed0e32d2a206f341c5843d07d81c52)
+[![Image from Gyazo](https://i.gyazo.com/3b5d423ad46eae90359fcc0809c3e8a8.gif)](https://gyazo.com/3b5d423ad46eae90359fcc0809c3e8a8)
 
 # 洗い出した要件
 - ユーザー管理機能

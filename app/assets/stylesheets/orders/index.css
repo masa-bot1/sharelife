@@ -143,14 +143,28 @@
   width: 50%;
   margin: 0 auto;
   margin-top: 50px;
+  text-align: center;
 }
 
 .buy-red-btn {
-  width: 100%;
   background: #ea352d;
   border: 1px solid #ea352d;
   color: #fff;
-  line-height: 48px;
-  font-size: 14px;
+  width: 100%;
+  height: 50px;
+  font-size: 17px;
+  margin-bottom: 4vh;
   cursor: pointer;
+}
+
+.buy-red-btn:hover {
+	opacity: 0.5 ;
+}
+
+.back-btn {
+  background: #aaa;
+  border: 1px solid #aaa;
+  color: #fff;
+  padding: 15px 35%;
+  text-decoration: none;
 }
