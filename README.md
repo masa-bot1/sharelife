@@ -44,9 +44,6 @@ http://54.168.91.44
 一人暮らしのサラリーマンやOLさんなど、仕事で忙しく家事まで手が回らない人が、気軽に家事を頼むために開発
 
 # DEMO
-### トップページ
-[![Image from Gyazo](https://i.gyazo.com/e7028dc7ffec3ea876bb7291bbc4479a.gif)](https://gyazo.com/e7028dc7ffec3ea876bb7291bbc4479a)
-
 ### カテゴリ別検索機能
 [![Image from Gyazo](https://i.gyazo.com/751a6424f9758e9af477b520b7ff2e1d.gif)](https://gyazo.com/751a6424f9758e9af477b520b7ff2e1d)
 
@@ -67,6 +64,7 @@ http://54.168.91.44
 
 ### いいね機能
 [![Image from Gyazo](https://i.gyazo.com/3b5d423ad46eae90359fcc0809c3e8a8.gif)](https://gyazo.com/3b5d423ad46eae90359fcc0809c3e8a8)
+
 
 # 洗い出した要件
 - ユーザー管理機能
