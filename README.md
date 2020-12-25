@@ -68,6 +68,8 @@ http://54.168.91.44
 ### いいね機能
 [![Image from Gyazo](https://i.gyazo.com/3b5d423ad46eae90359fcc0809c3e8a8.gif)](https://gyazo.com/3b5d423ad46eae90359fcc0809c3e8a8)
 
+[![Image from Gyazo](https://i.gyazo.com/ff7f90b75174e19cb7a912b1461abcac.gif)](https://gyazo.com/ff7f90b75174e19cb7a912b1461abcac)
+
 # 洗い出した要件
 - ユーザー管理機能
 - サービス出品、一覧表示、詳細表示、編集・削除機能
