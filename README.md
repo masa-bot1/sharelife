@@ -68,13 +68,9 @@ http://54.168.91.44
 ### いいね機能
 [![Image from Gyazo](https://i.gyazo.com/3b5d423ad46eae90359fcc0809c3e8a8.gif)](https://gyazo.com/3b5d423ad46eae90359fcc0809c3e8a8)
 
-[![Image from Gyazo](https://i.gyazo.com/e7028dc7ffec3ea876bb7291bbc4479a.gif)](https://gyazo.com/e7028dc7ffec3ea876bb7291bbc4479a)
+[![Image from Gyazo](https://i.gyazo.com/0c7e4144e73f30ebf4181a9e2bfe55cc.gif)](https://gyazo.com/0c7e4144e73f30ebf4181a9e2bfe55cc)
 
-[![Image from Gyazo](https://i.gyazo.com/3b5d423ad46eae90359fcc0809c3e8a8.gif)](https://gyazo.com/3b5d423ad46eae90359fcc0809c3e8a8)
 
-[![Image from Gyazo](https://i.gyazo.com/e3a57c18eab11c8b72af99073bf95368.gif)](https://gyazo.com/e3a57c18eab11c8b72af99073bf95368)
-
-[![Image from Gyazo](https://i.gyazo.com/751a6424f9758e9af477b520b7ff2e1d.gif)](https://gyazo.com/751a6424f9758e9af477b520b7ff2e1d)
 
 # 洗い出した要件
 - ユーザー管理機能
