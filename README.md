@@ -74,6 +74,8 @@ http://54.168.91.44
 
 [![Image from Gyazo](https://i.gyazo.com/e3a57c18eab11c8b72af99073bf95368.gif)](https://gyazo.com/e3a57c18eab11c8b72af99073bf95368)
 
+[![Image from Gyazo](https://i.gyazo.com/751a6424f9758e9af477b520b7ff2e1d.gif)](https://gyazo.com/751a6424f9758e9af477b520b7ff2e1d)
+
 # 洗い出した要件
 - ユーザー管理機能
 - サービス出品、一覧表示、詳細表示、編集・削除機能
