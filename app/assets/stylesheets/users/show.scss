@@ -86,16 +86,16 @@ img {
 
 .sold-out {
   position: absolute;
-  top: 40%;
-  width: 100%;
+  top: 5%;
+  left: 5%;
   text-align: center;
-  background-color: crimson;
-  transform: skewY(-10deg);
+  background-color: rgba(255, 0, 51, 0.9);
+  padding: 5px;
 }
 
 .sold-out>span {
   color: #FFF;
-  font-size: 45px;
+  font-size: 20px;
   font: bold;
 }
 
