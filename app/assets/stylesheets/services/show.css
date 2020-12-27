@@ -11,12 +11,27 @@
 
 .item-box {
   background-color: #FFF;
-  width: 70vw;
+  width: 100vw;
   min-width: 1200px;
   padding: 10vh 15vw;
   display: flex;
+}
+
+.main-show {
+  display: flex;
   flex-direction: column;
   align-items: center;
+  width: calc(70vw - 300px);
+}
+
+.side-show {
+  width: 300px;
+  margin-left: 7vw;
+}
+
+.side-show-header {
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
 .item-box>.name {
@@ -53,11 +68,13 @@
 .item-red-btn {
   text-align: center;
   background-color: #ea352d;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   color: #FFF;
-  margin: 20px 0px;
-  padding: 2vh 10vw;
+  margin: 20px 20px;
+  padding: 2vh 0;
+  white-space: nowrap;
+  border-radius: 5px;
 }
 
 .or-text {
