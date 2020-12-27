@@ -62,12 +62,33 @@
             <% end %>
           <% else %>
             <% unless @service.order.present? %>
-              <%# 商品が売れていない場合はこちらを表示しましょう %>
               <%= link_to '購入画面に進む', service_orders_path(@service), method: :get ,class:"item-red-btn"%>
-              <%# //商品が売れていない場合はこちらを表示しましょう %>
             <% end %>
           <% end %>
         <% end %>
+      </div>
+      <div class="side-show-main">
+        <h2 class="heading">
+          出品者プロフィール
+        </h2>
+        <%= link_to @service.user.nickname, "/users/#{@service.user.id}" %>
+        <p><%= @user.category.name %></p>
+        <p>
+          <% if @orders.length >= 3 %>
+            <%= image_tag "gold-96.png", class:"logo-img" %>
+            ゴールド
+          <% elsif @orders.length >= 2 %>
+            <%= image_tag "silver-96.png", class:"logo-img" %>
+            シルバー
+          <% elsif @orders.length >= 1 %>
+            <%= image_tag "bronze-96.png", class:"logo-img" %>
+            ブロンズ
+          <% else %>
+            レギュラー
+          <% end %>
+        </p>
+        <p>販売実績：<%= @orders.length %>件
+        </p>
       </div>
     </div>
   </div>
