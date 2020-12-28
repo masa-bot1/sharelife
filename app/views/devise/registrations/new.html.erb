@@ -10,6 +10,18 @@
 
   <%= render 'shared/error_messages', model: f.object %>
 
+  <div class="user-img-upload">
+    <div class="user-weight-bold-text">
+      イメージ画像
+      <span class="form-any">任意</span>
+    </div>
+    <div class="user-click-upload">
+      <p>
+        クリックしてファイルをアップロード
+      </p>
+      <%= f.file_field :image, id:"item-image" %>
+    </div>
+  </div>
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">ニックネーム</label>

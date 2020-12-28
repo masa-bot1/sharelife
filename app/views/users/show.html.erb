@@ -3,9 +3,14 @@
 <div class="main">
   <div class="inner">
     <div class="user__wrapper">
-      <h2 class="page-heading">
-        <%= "#{@user.nickname}さんのプロフィール"%>
-      </h2>
+      <div class="heading-wrapper">
+        <div class='user-img-content'>
+          <%= image_tag @user.image ,class:"user-box-img" %>
+        </div>
+        <h2 class="page-heading">
+          <%= "#{@user.nickname}さんのプロフィール"%>
+        </h2>
+      </div>
       <table class="table">
         <tbody>
           <tr>
