@@ -11,7 +11,7 @@
         <%= image_tag @service.image ,class:"item-box-img" %>
           <% if @service.order.present? %>
             <div class='sold-out'>
-              <span>Sold Out!!</span>
+              <span>SOLD OUT</span>
             </div>
           <% end %>
       </div>
@@ -20,10 +20,6 @@
       </div>
       <table class="detail-table">
         <tbody>
-          <tr>
-            <th class="detail-item">出品者</th>
-            <td class="detail-value"><%= link_to @service.user.nickname, "/users/#{@service.user.id}" %></td>
-          </tr>
           <tr>
             <th class="detail-item">カテゴリー</th>
             <td class="detail-value"><%= @service.category.name %></td>
