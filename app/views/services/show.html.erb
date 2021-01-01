@@ -67,8 +67,10 @@
         <h2 class="heading">
           出品者プロフィール
         </h2>
+        <div class='side-img-content'>
+          <%= image_tag @service.user.image ,class:"side-box-img" if @service.user.image.attached? %>
+        </div>
         <%= link_to @service.user.nickname, "/users/#{@service.user.id}" %>
-        <p><%= @user.category.name %></p>
         <p>
           <% if @orders.length >= 3 %>
             <%= image_tag "gold-96.png", class:"logo-img" %>
@@ -83,8 +85,8 @@
             レギュラー
           <% end %>
         </p>
-        <p>販売実績：<%= @orders.length %>件
-        </p>
+        <p>得意カテゴリ：<%= @user.category.name %></p>
+        <p>販売実績：<%= @orders.length %>件</p>
       </div>
     </div>
   </div>
