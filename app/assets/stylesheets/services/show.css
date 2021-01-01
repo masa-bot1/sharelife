@@ -57,7 +57,7 @@
   height: 90px;
   width: 90px;
   background-color: rgb(205, 202, 202);
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 50%;
 }
 
@@ -73,7 +73,7 @@
   width: 60vw;
   min-height: 500px;
   background-color: rgb(205, 202, 202);
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .item-price-box {
