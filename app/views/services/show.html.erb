@@ -67,10 +67,12 @@
         <h2 class="heading">
           出品者プロフィール
         </h2>
-        <div class='side-img-content'>
-          <%= image_tag @service.user.image ,class:"side-box-img" if @service.user.image.attached? %>
-        </div>
-        <%= link_to @service.user.nickname, "/users/#{@service.user.id}" %>
+        <%= link_to "/users/#{@service.user.id}" do %>
+          <div class='side-img-content'>
+            <%= image_tag @service.user.image ,class:"side-box-img" if @service.user.image.attached? %>
+          </div>
+          <%= @service.user.nickname %>
+        <% end %>
         <p>
           <% if @orders.length >= 3 %>
             <%= image_tag "gold-96.png", class:"logo-img" %>
