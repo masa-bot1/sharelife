@@ -23,6 +23,9 @@ class ServicesController < ApplicationController
 
   def show
     @service = Service.find(params[:id])
+    @user = @service.user
+    @services = @user.services
+    @orders = Order.where(service_id: @services)
     @like = Like.new
   end
 

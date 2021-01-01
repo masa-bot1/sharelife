@@ -3,72 +3,91 @@
 <%# 商品の概要 %>
 <div class="item-show">
   <div class="item-box">
-    <h2 class="name">
-      <%= @service.name %>
-    </h2>
-    <div class='item-img-content'>
-      <%= image_tag @service.image ,class:"item-box-img" %>
-        <% if @service.order.present? %>
-          <div class='sold-out'>
-            <span>Sold Out!!</span>
-          </div>
-        <% end %>
+    <div class="main-show">
+      <h2 class="name">
+        <%= @service.name %>
+      </h2>
+      <div class='item-img-content'>
+        <%= image_tag @service.image ,class:"item-box-img" %>
+          <% if @service.order.present? %>
+            <div class='sold-out'>
+              <span>SOLD OUT</span>
+            </div>
+          <% end %>
+      </div>
+      <div class="item-explain-box">
+        <span><%= @service.description %></span>
+      </div>
+      <table class="detail-table">
+        <tbody>
+          <tr>
+            <th class="detail-item">カテゴリー</th>
+            <td class="detail-value"><%= @service.category.name %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">交通費の負担</th>
+            <td class="detail-value"><%= @service.transportation.name %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">出品者の居住地域</th>
+            <td class="detail-value"><%= @service.prefecture.name %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">所要時間の目安</th>
+            <td class="detail-value"><%= @service.duration.name %></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="option">
+        <%= render partial: 'services/services',locals: {service: @service} %>
+      </div>
     </div>
-    <div class="item-price-box">
-      <span class="item-price">
-        ¥ <%= @service.price.to_s( :delimited) %>
-      </span>
-      <span class="item-postage">
-        <%= @service.transportation.name %>
-      </span>
-    </div>
-
-    <% if user_signed_in? %>
-      <% if current_user.id == @service.user_id %>
-        <% unless @service.order.present? %>
-          <%= link_to '編集', edit_service_path(@service.id), method: :get, class: "item-red-btn" %>
-          <p class='or-text'>or</p>
-          <%= link_to '削除', service_path(@service.id), method: :delete, class:'item-destroy' %>
+    <div class="side-show">
+      <div class="side-show-header">
+        <div class="item-price-box">
+          <span class="item-price">
+            ¥ <%= @service.price.to_s( :delimited) %>
+          </span>
+        </div>
+        <% if user_signed_in? %>
+          <% if current_user.id == @service.user_id %>
+            <% unless @service.order.present? %>
+              <%= link_to '編集', edit_service_path(@service.id), method: :get, class: "item-red-btn" %>
+              <p class='or-text'>or</p>
+              <%= link_to '削除', service_path(@service.id), method: :delete, class:'item-destroy' %>
+            <% end %>
+          <% else %>
+            <% unless @service.order.present? %>
+              <%= link_to '購入画面に進む', service_orders_path(@service), method: :get ,class:"item-red-btn"%>
+            <% end %>
+          <% end %>
         <% end %>
-      <% else %>
-        <% unless @service.order.present? %>
-          <%# 商品が売れていない場合はこちらを表示しましょう %>
-          <%= link_to '購入画面に進む', service_orders_path(@service), method: :get ,class:"item-red-btn"%>
-          <%# //商品が売れていない場合はこちらを表示しましょう %>
-        <% end %>
-      <% end %>
-    <% end %>
-
-    <div class="item-explain-box">
-      <span><%= @service.description %></span>
-    </div>
-    <table class="detail-table">
-      <tbody>
-        <tr>
-          <th class="detail-item">出品者</th>
-          <td class="detail-value"><%= link_to @service.user.nickname, "/users/#{@service.user.id}" %></td>
-        </tr>
-        <tr>
-          <th class="detail-item">カテゴリー</th>
-          <td class="detail-value"><%= @service.category.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-item">交通費の負担</th>
-          <td class="detail-value"><%= @service.transportation.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-item">出品者の居住地域</th>
-          <td class="detail-value"><%= @service.prefecture.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-item">所要時間の目安</th>
-          <td class="detail-value"><%= @service.duration.name %></td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="option">
-      <%= render partial: 'services/services',locals: {service: @service} %>
+      </div>
+      <div class="side-show-main">
+        <h2 class="heading">
+          出品者プロフィール
+        </h2>
+        <%= link_to @service.user.nickname, "/users/#{@service.user.id}" %>
+        <p><%= @user.category.name %></p>
+        <p>
+          <% if @orders.length >= 3 %>
+            <%= image_tag "gold-96.png", class:"logo-img" %>
+            ゴールド
+          <% elsif @orders.length >= 2 %>
+            <%= image_tag "silver-96.png", class:"logo-img" %>
+            シルバー
+          <% elsif @orders.length >= 1 %>
+            <%= image_tag "bronze-96.png", class:"logo-img" %>
+            ブロンズ
+          <% else %>
+            レギュラー
+          <% end %>
+        </p>
+        <p>販売実績：<%= @orders.length %>件
+        </p>
+      </div>
     </div>
   </div>
+</div>
   <%# /商品の概要 %>
 

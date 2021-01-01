@@ -3,9 +3,14 @@
 <div class="main">
   <div class="inner">
     <div class="user__wrapper">
-      <h2 class="page-heading">
-        <%= "#{@user.nickname}さんのプロフィール"%>
-      </h2>
+      <div class="heading-wrapper">
+        <div class='user-img-content'>
+          <%= image_tag @user.image ,class:"user-box-img" if @user.image.attached? %>
+        </div>
+        <h2 class="page-heading">
+          <%= "#{@user.nickname}さんのプロフィール"%>
+        </h2>
+      </div>
       <table class="table">
         <tbody>
           <tr>
@@ -25,7 +30,7 @@
                 <%= image_tag "bronze-96.png", class:"logo-img" %>
                 ブロンズ
               <% else %>
-                ノーマル
+                レギュラー
               <% end %>
             </td>
           </tr>
@@ -43,10 +48,10 @@
   </div>
 </div>
 
-<div class="service-edit">
+<div class="user-edit">
   <% if user_signed_in? %>
     <% if current_user.id == @user.id %>
-      <%= link_to '編集', edit_user_registration_path, method: :get, class: "service-edit-btn" %>
+      <%= link_to '編集', edit_user_registration_path, method: :get, class: "user-edit-btn" %>
     <% end %>
   <% end %>
 </div>
@@ -61,7 +66,7 @@
             <%= image_tag service.image, class: "item-img" %>
               <% if service.order.present? %>
                 <div class='sold-out'>
-                  <span>Sold Out!!</span>
+                  <span>SOLD OUT</span>
                 </div>
               <% end %>
           </div>

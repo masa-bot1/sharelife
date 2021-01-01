@@ -12,12 +12,30 @@ img {
   margin: 0 auto;
 }
 
-.page-heading {
-  font-size: 30px;
-  margin-bottom: 28px;
+/* ユーザーページ */
+
+.heading-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5vh;
 }
 
-/* ユーザーページ */
+.page-heading {
+  font-size: 30px;
+}
+
+.user-img-content {
+  position: relative;
+  margin-right: 2vw;
+}
+
+.user-box-img {
+  height: 120px;
+  width: 120px;
+  background-color: rgb(205, 202, 202);
+  object-fit: contain;
+  border-radius: 50%;
+}
 
 .table{
   border-collapse: collapse;
@@ -39,6 +57,26 @@ img {
   border-collapse: collapse;
   width: 70%;
   padding: 16px 8px;
+}
+
+.user-edit {
+  background-color: #FFF;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-edit-btn {
+  text-align: center;
+  background-color: #ea352d;
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 20px 0;
+  padding: 2vh 7vw;
+  white-space: nowrap;
+  border-radius: 5px;
 }
 
 /* 出品サービス */
@@ -86,16 +124,16 @@ img {
 
 .sold-out {
   position: absolute;
-  top: 40%;
-  width: 100%;
+  top: 5%;
+  left: 5%;
   text-align: center;
-  background-color: crimson;
-  transform: skewY(-10deg);
+  background-color: rgba(255, 0, 51, 0.9);
+  padding: 5px;
 }
 
 .sold-out>span {
   color: #FFF;
-  font-size: 45px;
+  font-size: 20px;
   font: bold;
 }
 

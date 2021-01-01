@@ -3,7 +3,7 @@ app/assets/stylesheets/items/new.css %>
 
 <div class="items-sell-contents">
   <header class="items-sell-header">
-    <%= link_to image_tag('chawan.png' , size: '185x50'), "/" %>
+    <%= link_to image_tag('chawan.png' ), "/" , class:"sharelife-icon" %>
   </header>
   <div class="items-sell-main">
     <h2 class="items-sell-title">サービスの情報を入力</h2>
@@ -115,7 +115,7 @@ app/assets/stylesheets/items/new.css %>
     <%# 下部ボタン %>
     <div class="sell-btn-contents">
       <%= f.submit "変更する" ,class:"sell-btn" %>
-      <%=link_to 'もどる', "#", class:"back-btn" %>
+      <%=link_to 'もどる', service_path(@service.id), class:"back-btn" %>
     </div>
     <%# /下部ボタン %>
   </div>
