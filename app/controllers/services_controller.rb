@@ -50,7 +50,7 @@ class ServicesController < ApplicationController
   end
 
   def search
-    @results = @p.result.includes(:user)  # 検索条件にマッチした商品の情報を取得
+    @services = Service.search(params[:keyword])
   end
 
   def select_category_index
@@ -64,7 +64,4 @@ class ServicesController < ApplicationController
     params.require(:service).permit(:name, :description, :category_id, :transportation_id, :prefecture_id, :duration_id, :price, :image).merge(user_id: current_user.id)
   end
 
-  def search_service
-    @p = Service.ransack(params[:q])
-  end
 end
