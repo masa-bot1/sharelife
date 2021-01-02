@@ -26,4 +26,12 @@ class Service < ApplicationRecord
   end
 
   validates :prefecture_id, numericality: { other_than: 0 }
+
+  def self.search(search)
+    if search != ""
+      Service.where(['name LIKE(?) OR description LIKE(?)', "%#{search}%", "%#{search}%"])
+    else
+      Service.all
+    end
+  end
 end
