@@ -1,6 +1,5 @@
 class ServicesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit]
-  before_action :search_service, only: [:index, :search]
 
   def index
     @services = Service.includes(:user).order('created_at DESC')
