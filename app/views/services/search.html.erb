@@ -1,45 +1,36 @@
 <%= render "shared/header" %>
-<div class='main'>
-  <div class='item-contents'>
-    <h2 class='title'>検索結果</h2><br>
-    <ul class='item-lists'>
-      <%# 検索結果の個数で条件分岐 %>
-      <% if @results.length !=0 %>
-        <% @results.each do |result| %>
-          <td>
-          <br>
-          <%= link_to service_path(result.id) do %>
+<div class='select-category-contents'>
+  <h2 class='subtitle'>検索結果</h2><br>
+  <ul class='item-category-lists'>
+    <%# 検索結果の個数で条件分岐 %>
+    <% if @services.length != 0 %>
+      <% @services.each do |service| %>
+        <% unless service.order.present? %>
           <li class='list'>
-            <div class='item-img-content'>
-              <%= image_tag result.image, class: "item-img" %>
-              <% if result.order.present? %>
-                <div class='sold-out'>
-                  <span>Sold Out!!</span>
-                </div>
-              <% end %>
-            </div>
-            <div class='item-info'>
-              <h3 class='item-name'>
-                <%= result.name %>
-              </h3>
-              <div class='item-price'>
-                <span>
-                  <%= result.price %>円<br>
-                  <%= result.category.name %><br>
-                  <%= result.transportation.name %><br>
-                  <%= result.user.nickname %>
-                </span>
+            <%= link_to service_path(service.id) do %>
+              <div class='item-img-content'>
+                <%= image_tag service.image, class: "item-img" %>
               </div>
-            </div>
+              <div class='item-info'>
+                <h3 class='item-name'>
+                  <%= service.name %>
+                </h3>
+                <div class='item-price'>
+                  <span>
+                    <%= service.user.nickname %><br>
+                    <%= render partial: 'services/services',locals: {service: service} %>
+                  </span>
+                  <div class='item-price'>
+                    <span><%= service.price.to_s( :delimited) %>円</span>
+                  </div>
+                </div>
+              </div>
+            <% end %>
           </li>
-          <% end %>
         <% end %>
-      <% else %>
-        該当するサービスはありません
       <% end %>
-    </ul>
-  </div>
+    <% else %>
+      <p>該当するサービスはありません。</p>
+    <% end %>
+  </ul>
 </div>
-
-<br>
-<%= link_to 'トップページへ戻る', root_path %>
