@@ -59,7 +59,7 @@ class ServicesController < ApplicationController
 
   def new_guest
     user = User.find_or_create_by!(email: 'guest@example.com') do |user|
-      user.password = Faker::Internet.password(min_length: 6)
+      user.password = "guest1"
       user.password_confirmation = user.password
       user.nickname = "take"
       user.last_name = "山田"
