@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       get 'select_category_index'
     end
   end
+  post '/services/guest_sign_in', to: 'services#new_guest'
   resources :users, only: [:show, :edit, :update]
   post   '/like/:service_id' => 'likes#like',   as: 'like'
   delete '/like/:service_id' => 'likes#unlike', as: 'unlike'

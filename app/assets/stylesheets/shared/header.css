@@ -113,4 +113,10 @@
 .sign-up {
   text-decoration: none;
   color: #333333;
+  margin-right: 3vw;
+}
+
+.guset-login {
+  text-decoration: none;
+  color: #333333;
 }

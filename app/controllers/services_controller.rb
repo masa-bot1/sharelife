@@ -57,6 +57,22 @@ class ServicesController < ApplicationController
     @service = Service.where(category_id: params[:id]).first
   end
 
+  def new_guest
+    user = User.find_or_create_by!(email: 'guest@example.com') do |user|
+      user.password = Faker::Internet.password(min_length: 6)
+      user.password_confirmation = user.password
+      user.nickname = "take"
+      user.last_name = "山田"
+      user.first_name = "太郎"
+      user.last_name_kana = "ヤマダ"
+      user.first_name_kana = "タロウ"
+      user.birthday = "2000-01-01"
+      user.category_id = 3
+    end
+    sign_in user
+    redirect_to root_path, notice: 'ゲストユーザーとしてログインしました。'
+  end
+
   private
 
   def service_params

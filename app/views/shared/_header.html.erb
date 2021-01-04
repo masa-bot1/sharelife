@@ -22,6 +22,7 @@
       <% else %>
         <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
         <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+        <li><%= link_to 'ゲストログイン（閲覧用）', services_guest_sign_in_path, method: :post, class: "guest-login" %></li>
       <% end %>
     </ul>
   </div>
