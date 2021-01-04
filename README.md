@@ -39,23 +39,26 @@ http://54.168.91.44
 一人暮らしのサラリーマンやOLさんなど、仕事で忙しく家事まで手が回らない人が、気軽に家事を頼むために開発
 
 # DEMO
+### キーワード検索機能
+[![Image from Gyazo](https://i.gyazo.com/5207f9bc40e68665f7d5f30dbc0669a4.gif)](https://gyazo.com/5207f9bc40e68665f7d5f30dbc0669a4)
+
 ### カテゴリ別検索機能
 [![Image from Gyazo](https://i.gyazo.com/751a6424f9758e9af477b520b7ff2e1d.gif)](https://gyazo.com/751a6424f9758e9af477b520b7ff2e1d)
 
 ### 新規登録画面
-[![Image from Gyazo](https://i.gyazo.com/2df3e334cfae555cd37fa2bebc69ef7a.gif)](https://gyazo.com/2df3e334cfae555cd37fa2bebc69ef7a)
+[![Image from Gyazo](https://i.gyazo.com/10709aa7c3a640c295f29595cc6f41da.gif)](https://gyazo.com/10709aa7c3a640c295f29595cc6f41da)
 
 ### 出品画面
-[![Image from Gyazo](https://i.gyazo.com/01d4fbe933e937b7832024adb6fc2109.gif)](https://gyazo.com/01d4fbe933e937b7832024adb6fc2109)
+[![Image from Gyazo](https://i.gyazo.com/1c1963b2c0087d2de1369badb290a5a5.gif)](https://gyazo.com/1c1963b2c0087d2de1369badb290a5a5)
 
 ### 購入画面
-[![Image from Gyazo](https://i.gyazo.com/d910bbc384f824edd81987a43b4ed716.gif)](https://gyazo.com/d910bbc384f824edd81987a43b4ed716)
+[![Image from Gyazo](https://i.gyazo.com/767d889c29d8ac787c8a5672dcc75e6b.gif)](https://gyazo.com/767d889c29d8ac787c8a5672dcc75e6b)
+
+### サービス詳細ページ
+[![Image from Gyazo](https://i.gyazo.com/d1ac72b7e6c1f6432547b68699d34250.gif)](https://gyazo.com/d1ac72b7e6c1f6432547b68699d34250)
 
 ### ユーザー詳細ページ
-[![Image from Gyazo](https://i.gyazo.com/0927342ad679008cc68d861fc63cfc2a.gif)](https://gyazo.com/0927342ad679008cc68d861fc63cfc2a)
-
-### ユーザー編集機能
-[![Image from Gyazo](https://i.gyazo.com/085c09ea0756bd37660c632e46151ce0.gif)](https://gyazo.com/085c09ea0756bd37660c632e46151ce0)
+[![Image from Gyazo](https://i.gyazo.com/417b3d9a652f548f2f31ba9f869d1270.gif)](https://gyazo.com/417b3d9a652f548f2f31ba9f869d1270)
 
 ### いいね機能
 [![Image from Gyazo](https://i.gyazo.com/3b5d423ad46eae90359fcc0809c3e8a8.gif)](https://gyazo.com/3b5d423ad46eae90359fcc0809c3e8a8)
@@ -105,12 +108,11 @@ VSCode
 
 # 課題や今後実装したい機能
 ## 課題
-- 見た目をもっとわかりやすくする必要がある。
-- ユーザーの販売実績がトップページで表示できていない。
+- 出品サービスを誤って削除してしまう恐れがある。
+- 出品者の情報が不十分。
 
 ## 今後実装したい機能
-- ユーザーの販売実績をトップページに表示
-- キーワード検索機能（現段階では検索フォームのみ実装）
+- サービスを削除する際に確認用ダイアログを表示
 - フォロー・フォロワー機能
 
 # ER図
