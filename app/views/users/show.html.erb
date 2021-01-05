@@ -5,7 +5,11 @@
     <div class="user__wrapper">
       <div class="heading-wrapper">
         <div class='user-img-content'>
-          <%= image_tag @user.image ,class:"user-box-img" if @user.image.attached? %>
+          <% if @user.image.attached? %>
+            <%= image_tag @user.image ,class:"user-box-img" %>
+          <% else %>
+            <%= image_tag "human-dummy.png" ,class:"user-box-img" %>
+          <% end %>
         </div>
         <h2 class="page-heading">
           <%= "#{@user.nickname}さんのプロフィール"%>

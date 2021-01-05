@@ -2,9 +2,9 @@ class ServicesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit]
 
   def index
-    @services = Service.includes(:user).order('created_at DESC')
+    @services = Service.includes(:user).order('created_at DESC').limit(10)
     @categories = Category.all.drop(1)
-    @users = User.all.order('created_at DESC')
+    @users = User.all.order('created_at DESC').limit(10)
   end
 
   def new
