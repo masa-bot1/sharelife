@@ -54,7 +54,7 @@
             <% unless @service.order.present? %>
               <%= link_to '編集', edit_service_path(@service.id), method: :get, class: "item-red-btn" %>
               <p class='or-text'>or</p>
-              <%= link_to '削除', service_path(@service.id), method: :delete, class:'item-destroy' %>
+              <%= link_to '削除', service_path(@service.id), method: :delete, data: { confirm: '本当に削除して良いですか？'}, class:'item-destroy' %>
             <% end %>
           <% else %>
             <% unless @service.order.present? %>

@@ -75,3 +75,6 @@ gem 'kaminari'
 gem "jquery-rails"
 gem "aws-sdk-s3", require: false
 gem 'faker'
+gem 'uglifier'
+gem 'bootstrap'
+gem 'data-confirm-modal'
