@@ -1,10 +1,7 @@
 $(function () {
-  $('.tooltip').hide();
-  $('ul').hover(
-  function () {
-      $(this).children('.tooltip').fadeIn('fast');
-  },
-  function () {
-      $(this).children('.tooltip').fadeOut('fast');
+  $('span').hover(function () {
+    $(this).next('p').show();
+  },function () {
+    $(this).next('p').hide();
   });
 });

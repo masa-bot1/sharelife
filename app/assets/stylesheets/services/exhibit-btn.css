@@ -9,6 +9,11 @@
   padding: 15px;
 }
 
+.purchase-btn:hover {
+  opacity: 0.8;
+  transition: 0.1s;
+}
+
 .purchase-btn-text {
   color: #fff;
   display: block;
