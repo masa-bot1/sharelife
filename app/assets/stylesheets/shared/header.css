@@ -74,18 +74,11 @@
 .lists-left {
   display: flex;
   min-width: 200px;
-
 }
 
-.category-list {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
-}
-
-.brand-list {
-  text-decoration: none;
-  color: #333333;
+.lists-left>li:hover {
+  opacity: 0.6;
+  transition: 0.1s;
 }
 
 .lists-right {
@@ -94,6 +87,10 @@
   align-items: flex-end;
 }
 
+.lists-right>li:hover {
+  opacity: 0.6;
+  transition: 0.1s;
+}
 
 .user-nickname {
   text-decoration: none;
