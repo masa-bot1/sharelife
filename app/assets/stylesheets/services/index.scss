@@ -4,11 +4,6 @@ a {
   display: block;
 }
 
-a:hover {
-  opacity: 0.5 ;
-  transition: 0.2s ;
-}
-
 .main {
   background: #f8f8f8;
 }
@@ -93,6 +88,11 @@ a:hover {
   margin: 1vw;
 }
 
+.category-lists>.list:hover {
+  opacity: 0.5;
+  transition: 0.1s;
+}
+
 .item-lists {
   width: 90vw;
   display: flex;
@@ -107,6 +107,10 @@ a:hover {
   background-color: #FFF;
 }
 
+.item-lists>.list:hover {
+  opacity: 0.5;
+  transition: 0.1s;
+}
 
 .item-img-content {
   position: relative;
@@ -170,6 +174,11 @@ a:hover {
   padding: 1vw;
   margin: 1vw;
   width: 37vw;
+}
+
+.user-lists>.list:hover {
+  opacity: 0.5;
+  transition: 0.1s;
 }
 
 /* //ユーザー一覧 */

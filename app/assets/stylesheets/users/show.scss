@@ -79,6 +79,11 @@ img {
   border-radius: 5px;
 }
 
+.user-edit-btn:hover {
+  opacity: 0.5;
+  transition: 0.1s;
+}
+
 /* 出品サービス */
 .item-contents {
   background-color: #FFF;
@@ -107,6 +112,10 @@ img {
   background-color: #FFF;
 }
 
+.item-user-lists>.list:hover {
+  opacity: 0.5;
+  transition: 0.1s;
+}
 
 .item-img-content {
   position: relative;

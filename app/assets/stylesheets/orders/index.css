@@ -168,3 +168,8 @@
   padding: 15px 35%;
   text-decoration: none;
 }
+
+.back-btn:hover {
+  opacity: 0.5;
+  transition: 0.1s;
+}

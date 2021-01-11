@@ -13,3 +13,8 @@
   height: 49px;
   object-fit: contain;
 }
+
+.second-logo:hover {
+  opacity: 0.5;
+  transition: 0.1s;
+}

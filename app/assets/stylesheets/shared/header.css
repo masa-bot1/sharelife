@@ -20,6 +20,11 @@
   align-items: center;
 }
 
+.icon:hover {
+  opacity: 0.5;
+  transition: 0.1s;
+}
+
 .sharelife-icon {
   width: 5vw;
   margin-right: 1vw;
@@ -69,18 +74,11 @@
 .lists-left {
   display: flex;
   min-width: 200px;
-
 }
 
-.category-list {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
-}
-
-.brand-list {
-  text-decoration: none;
-  color: #333333;
+.lists-left>li:hover {
+  opacity: 0.6;
+  transition: 0.1s;
 }
 
 .lists-right {
@@ -89,6 +87,10 @@
   align-items: flex-end;
 }
 
+.lists-right>li:hover {
+  opacity: 0.6;
+  transition: 0.1s;
+}
 
 .user-nickname {
   text-decoration: none;
@@ -137,4 +139,36 @@
   border-radius: 5px;
   padding: 0 2vw;
   background-color: #3ccace;
+}
+
+span {
+  position:relative;
+}
+.tooltip {
+  display: none;
+  position: absolute;
+  top: 19%;
+  right: 26%;
+  padding: 5px 16px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;  
+  border-radius: 8px;
+  background: #333;
+  color: #fff;
+  font-size: 15px;
+  opacity: 0.8;
+}
+.tooltip:before {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -10px;
+  border: solid transparent;
+  border-color: rgba(51, 51, 51, 0);
+  border-bottom-color: #333;
+  border-width: 10px;
+  pointer-events: none;
+  content: " ";
 }

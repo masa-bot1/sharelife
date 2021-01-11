@@ -14,10 +14,12 @@
   </div>
   <div class='nav'>
     <ul class='lists-left'>
+      <li><%= link_to '出品者を探す', '#', class: "user-nickname" %></li>
     </ul>
     <ul class='lists-right'>
       <% if user_signed_in? %>
-        <li><%= link_to current_user.nickname, user_path(current_user), class: "user-nickname" %></li>
+        <span><li><%= link_to current_user.nickname, user_path(current_user), class: "user-nickname" %></li></span>
+        <p class='tooltip'>マイページ</p>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
       <% else %>
         <li><%= link_to 'ゲストログイン（閲覧用）', services_guest_sign_in_path, method: :post, class: "guest-login" %></li>

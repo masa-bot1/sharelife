@@ -7,7 +7,6 @@
   justify-content: center;
 }
 
-/* form-wrapは商品購入画面でも使用 */
 .form-wrap {
   width: 50%;
   background-color: white;
@@ -145,7 +144,6 @@
   display: contents;
 }
 
-
 .form-bottom-text {
   font-size: 15px;
   margin-top: 10px;
@@ -175,6 +173,11 @@
   line-height: 48px;
   font-size: 14px;
   cursor: pointer;
+}
+
+.register-red-btn:hover {
+  opacity: 0.5;
+  transition: 0.1s;
 }
 
 .register-info {
