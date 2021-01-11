@@ -20,6 +20,11 @@
   align-items: center;
 }
 
+.icon:hover {
+  opacity: 0.5;
+  transition: 0.1s;
+}
+
 .sharelife-icon {
   width: 5vw;
   margin-right: 1vw;
