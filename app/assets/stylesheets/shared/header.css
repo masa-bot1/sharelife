@@ -84,15 +84,29 @@
   display: block;
 }
 
+.left-list {
+  text-decoration: none;
+  line-height: 32px;
+  color: #333333;
+  font-weight: bold;
+}
+
+.left-list:hover {
+  opacity: 0.5;
+  transition: 0.1s;
+}
+
 .dropdwn_menu {
   width: 100%;
   position: absolute;
   background: rgb(75, 100, 209);
+  display: none;
 }
 
 .dropdwn_menu li a{
   display: block;
   color: #fff;
+  padding-left: 1vw;
 }
 
 .dropdwn_menu li a:hover {
@@ -114,7 +128,6 @@
 .user-nickname {
   text-decoration: none;
   line-height: 32px;
-  margin-right: 3vw;
   color: #333333;
   font-weight: bold;
 }
@@ -126,6 +139,7 @@
   border: 1px solid #DADDDC;
   border-radius: 5px;
   padding: 0 2vw;
+  margin-left: 3vw;
 }
 
 .guest-login {
@@ -159,9 +173,6 @@
   background-color: #3ccace;
 }
 
-span {
-  position:relative;
-}
 .tooltip {
   display: none;
   position: absolute;
@@ -189,14 +200,4 @@ span {
   border-width: 10px;
   pointer-events: none;
   content: " ";
-}
-
-.dropdwn_menu{
-  width: 100%;
-  display: none;
-  position: absolute;
-  margin-left: -5px;
-  margin-top: 5px;
-  padding: 0;
-  background: rgb(75, 100, 209);
 }
