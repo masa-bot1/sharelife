@@ -1,39 +1,39 @@
 <%= render "shared/header" %>
-  <%# 商品一覧 %>
-  <div class='select-category-contents'>
-    <h2 class="subtitle" >
-    <% if @service.present?%>
-      <%= @service.category.name %>
-    <% else %>
-      現在出品中のサービスはありません。
-    <% end %>
-    </h2>
-    <ul class='item-category-lists'>
-      <% @services.each do |service| %>
-        <% unless service.order.present? %>
-          <li class='list'>
-            <%= link_to service_path(service.id) do %>
-              <div class='item-img-content'>
-                <%= image_tag service.image, class: "item-img" %>
-              </div>
-              <div class='item-info'>
-                <h3 class='item-name'>
-                  <%= service.name %>
-                </h3>
+<%# 商品一覧 %>
+<div class='select-category-contents'>
+  <h2 class="subtitle" >
+  <% if @service.present?%>
+    <%= @service.category.name %>
+  <% else %>
+    現在出品中のサービスはありません。
+  <% end %>
+  </h2>
+  <ul class='item-category-lists'>
+    <% @services.each do |service| %>
+      <% unless service.order.present? %>
+        <li class='list'>
+          <%= link_to service_path(service.id) do %>
+            <div class='item-img-content'>
+              <%= image_tag service.image, class: "item-img" %>
+            </div>
+            <div class='item-info'>
+              <h3 class='item-name'>
+                <%= service.name %>
+              </h3>
+              <div class='item-price'>
+                <span>
+                  <%= service.user.nickname %><br>
+                  <%= render partial: 'services/services',locals: {service: service} %>
+                </span>
                 <div class='item-price'>
-                  <span>
-                    <%= service.user.nickname %><br>
-                    <%= render partial: 'services/services',locals: {service: service} %>
-                  </span>
-                  <div class='item-price'>
-                    <span><%= service.price.to_s( :delimited) %>円</span>
-                  </div>
+                  <span><%= service.price.to_s( :delimited) %>円</span>
                 </div>
               </div>
-            <% end %>
-          </li>
-        <% end %>
+            </div>
+          <% end %>
+        </li>
       <% end %>
-    </ul>
-  </div>
-  <%# /商品一覧 %>
+    <% end %>
+  </ul>
+</div>
+<%# /商品一覧 %>

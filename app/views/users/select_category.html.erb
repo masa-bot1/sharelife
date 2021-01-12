@@ -1,0 +1,23 @@
+<%= render "shared/header" %>
+<%# 商品一覧 %>
+<div class='select-category-contents'>
+  <h2 class="subtitle" >
+  <% if @user.present?%>
+    <%= @user.category.name %>の出品者
+  <% else %>
+    現在出品しているユーザーはおりません。
+  <% end %>
+  </h2>
+  <ul class='user-lists'>
+    <% @users.each do |user| %>
+      <li class='list'>
+        <%= link_to "/users/#{user.id}" do %>
+          <%= user.nickname %><br>
+          <%= user.category.name %><br>
+          出品サービス<%= user.services.length %>件<br>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<%# /商品一覧 %>
