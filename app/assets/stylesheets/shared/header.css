@@ -97,7 +97,7 @@
 }
 
 .dropdwn_menu {
-  width: 100%;
+  width: 230%;
   position: absolute;
   background: rgb(75, 100, 209);
   display: none;
@@ -106,7 +106,7 @@
 .dropdwn_menu li a{
   display: block;
   color: #fff;
-  padding-left: 1vw;
+  padding:0 1vw;
 }
 
 .dropdwn_menu li a:hover {
