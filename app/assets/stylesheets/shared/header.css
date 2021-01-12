@@ -101,6 +101,7 @@
   position: absolute;
   background: rgb(75, 100, 209);
   display: none;
+  z-index: 3;
 }
 
 .dropdwn_menu li a{
