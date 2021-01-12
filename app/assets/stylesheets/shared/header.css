@@ -74,11 +74,30 @@
 .lists-left {
   display: flex;
   min-width: 200px;
+  max-width: 1200px;
 }
 
-.lists-left>li:hover {
-  opacity: 0.6;
-  transition: 0.1s;
+.lists-left>li {
+  max-width: calc(1200px/5);
+  position: relative;
+  padding: 5px;
+  display: block;
+}
+
+.dropdwn_menu {
+  width: 100%;
+  position: absolute;
+  background: rgb(75, 100, 209);
+}
+
+.dropdwn_menu li a{
+  display: block;
+  color: #fff;
+}
+
+.dropdwn_menu li a:hover {
+  background: #b3d7ff;
+  color: rgb(65, 65, 65);
 }
 
 .lists-right {
@@ -99,7 +118,6 @@
   color: #333333;
   font-weight: bold;
 }
-
 
 .logout {
   text-decoration: none;
@@ -171,4 +189,14 @@ span {
   border-width: 10px;
   pointer-events: none;
   content: " ";
+}
+
+.dropdwn_menu{
+  width: 100%;
+  display: none;
+  position: absolute;
+  margin-left: -5px;
+  margin-top: 5px;
+  padding: 0;
+  background: rgb(75, 100, 209);
 }
