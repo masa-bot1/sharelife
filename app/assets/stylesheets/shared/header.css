@@ -99,20 +99,21 @@
 .dropdwn_menu {
   width: 230%;
   position: absolute;
-  background: rgb(75, 100, 209);
+  background: #fff;
   display: none;
   z-index: 3;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }
 
 .dropdwn_menu li a{
   display: block;
-  color: #fff;
   padding:0 1vw;
+  line-height: 5vh;
 }
 
 .dropdwn_menu li a:hover {
-  background: #b3d7ff;
-  color: rgb(65, 65, 65);
+  background-color: #ea352d;
+  color: #fff;
 }
 
 .lists-right {

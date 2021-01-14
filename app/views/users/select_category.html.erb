@@ -8,7 +8,7 @@
     現在出品しているユーザーはおりません。
   <% end %>
   </h2>
-  <ul class='user-lists'>
+  <ul class='category-user-lists'>
     <% @users.each do |user| %>
       <li class='list'>
         <%= link_to "/users/#{user.id}" do %>

@@ -1,0 +1,21 @@
+.category-user-lists {
+  width: 90vw;
+  display: flex;
+  white-space: nowrap;
+  justify-content: center;
+  font-weight: bold;
+  background-color: #FFF;
+}
+
+.category-user-lists>.list {
+  border: solid 3px #6091d3;/*線*/
+  border-radius: 10px;/*角の丸み*/
+  padding: 1vw;
+  margin: 1vw;
+  width: 250px;
+}
+
+.category-user-lists>.list:hover {
+  opacity: 0.5;
+  transition: 0.1s;
+}
