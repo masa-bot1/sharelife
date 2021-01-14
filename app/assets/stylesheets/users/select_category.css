@@ -1,6 +1,7 @@
 .category-user-lists {
   width: 90vw;
   display: flex;
+  flex-wrap: wrap;
   white-space: nowrap;
   justify-content: center;
   font-weight: bold;
