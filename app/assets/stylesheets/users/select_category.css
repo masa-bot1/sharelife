@@ -4,7 +4,6 @@
   flex-wrap: wrap;
   white-space: nowrap;
   justify-content: center;
-  font-weight: bold;
   background-color: #FFF;
 }
 
@@ -13,7 +12,7 @@
   border-radius: 10px;/*角の丸み*/
   padding: 1vw;
   margin: 1vw;
-  width: 250px;
+  width: 230px;
 }
 
 .category-user-lists>.list:hover {

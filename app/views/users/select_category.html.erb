@@ -12,9 +12,26 @@
     <% @users.each do |user| %>
       <li class='list'>
         <%= link_to "/users/#{user.id}" do %>
-          <%= user.nickname %><br>
-          <%= user.category.name %><br>
-          出品サービス<%= user.services.length %>件<br>
+          <div class='topuser-info'> <%# トップページのビューを活用 %>
+            <div class='topuser-img-content'>
+              <% if user.image.attached? %>
+                <%= image_tag user.image ,class:"topuser-box-img" %>
+              <% else %>
+                <%= image_tag "human-dummy.png" ,class:"topuser-box-img" %>
+              <% end %>
+            </div>
+            <div class='topuser-info-right'>
+              <div class='topuser-nickname'>
+                <%= user.nickname %>
+              </div>
+              <div class='topuser-service'>
+                出品サービス<%= user.services.length %>件
+              </div>
+            </div>
+          </div>
+          <div class='topuser-category'>
+            <%= user.category.name %>
+          </div> <%# /トップページのビューを活用 %>
         <% end %>
       </li>
     <% end %>
