@@ -177,7 +177,6 @@ a {
   overflow-x: scroll;
   white-space: nowrap;
   justify-content: left;
-  font-weight: bold;
   background-color: #FFF;
 }
 
@@ -193,6 +192,35 @@ a {
 .user-lists>.list:hover {
   opacity: 0.5;
   transition: 0.1s;
+}
+
+.topuser-info {
+  display: flex;
+}
+
+.topuser-img-content {
+  position: relative;
+  margin: 0 1vw 2vh 0;
+}
+
+.topuser-box-img {
+  height: 42px;
+  width: 42px;
+  background-color: rgb(205, 202, 202);
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.topuser-nickname {
+  font-weight: bold;
+}
+
+.topuser-category {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 15px;
 }
 
 /* //ユーザー一覧 */
