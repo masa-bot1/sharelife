@@ -29,7 +29,7 @@ http://54.168.91.44
 - パスワード: tomtom1
 
 # 利用方法
-① 新規登録（登録済ならログイン）
+① 新規登録（登録済ならログイン）※ゲストログイン機能あり
 
 ② サービス出品ページで必要事項を入力し、出品
 
@@ -40,42 +40,42 @@ http://54.168.91.44
 
 # DEMO
 ### キーワード検索機能
-[![Image from Gyazo](https://i.gyazo.com/5207f9bc40e68665f7d5f30dbc0669a4.gif)](https://gyazo.com/5207f9bc40e68665f7d5f30dbc0669a4)
+[![Image from Gyazo](https://i.gyazo.com/f1e2b2584401b6ad094c5a070ab951c9.gif)](https://gyazo.com/f1e2b2584401b6ad094c5a070ab951c9)
 
 ### カテゴリ別検索機能
-[![Image from Gyazo](https://i.gyazo.com/751a6424f9758e9af477b520b7ff2e1d.gif)](https://gyazo.com/751a6424f9758e9af477b520b7ff2e1d)
+[![Image from Gyazo](https://i.gyazo.com/0bea067d48633bfa988054eced5aef20.gif)](https://gyazo.com/0bea067d48633bfa988054eced5aef20)
 
-### 新規登録画面
-[![Image from Gyazo](https://i.gyazo.com/10709aa7c3a640c295f29595cc6f41da.gif)](https://gyazo.com/10709aa7c3a640c295f29595cc6f41da)
+### 「出品者を探す」機能
+[![Image from Gyazo](https://i.gyazo.com/eb463f9df97da6763bdee949b1ea7595.gif)](https://gyazo.com/eb463f9df97da6763bdee949b1ea7595)
 
 ### 出品画面
-[![Image from Gyazo](https://i.gyazo.com/1c1963b2c0087d2de1369badb290a5a5.gif)](https://gyazo.com/1c1963b2c0087d2de1369badb290a5a5)
+[![Image from Gyazo](https://i.gyazo.com/a99a6a70fc68e9b8e25763f0d7eb3695.gif)](https://gyazo.com/a99a6a70fc68e9b8e25763f0d7eb3695)
 
 ### 購入画面
-[![Image from Gyazo](https://i.gyazo.com/767d889c29d8ac787c8a5672dcc75e6b.gif)](https://gyazo.com/767d889c29d8ac787c8a5672dcc75e6b)
+[![Image from Gyazo](https://i.gyazo.com/05d024bfc6b5141962fd68f119c2fb0b.gif)](https://gyazo.com/05d024bfc6b5141962fd68f119c2fb0b)
 
 ### サービス詳細ページ
-[![Image from Gyazo](https://i.gyazo.com/d1ac72b7e6c1f6432547b68699d34250.gif)](https://gyazo.com/d1ac72b7e6c1f6432547b68699d34250)
+[![Image from Gyazo](https://i.gyazo.com/b7b1a6bf531f4182a55f2d2dac3c4540.gif)](https://gyazo.com/b7b1a6bf531f4182a55f2d2dac3c4540)
 
 ### ユーザー詳細ページ
-[![Image from Gyazo](https://i.gyazo.com/417b3d9a652f548f2f31ba9f869d1270.gif)](https://gyazo.com/417b3d9a652f548f2f31ba9f869d1270)
+[![Image from Gyazo](https://i.gyazo.com/92ef518aeed3a0058c1d2402b926954d.gif)](https://gyazo.com/92ef518aeed3a0058c1d2402b926954d)
 
 ### いいね機能
-[![Image from Gyazo](https://i.gyazo.com/3b5d423ad46eae90359fcc0809c3e8a8.gif)](https://gyazo.com/3b5d423ad46eae90359fcc0809c3e8a8)
+[![Image from Gyazo](https://i.gyazo.com/294e2c0bced6d94174933945e737b880.gif)](https://gyazo.com/294e2c0bced6d94174933945e737b880)
 
 
 # 洗い出した要件
-- ユーザー管理機能
+- ユーザー管理機能（新規登録、ログイン、ログアウト）
 - サービス出品、一覧表示、詳細表示、編集・削除機能
 - サービス購入機能
-- カテゴリー別検索機能
-- キーワード検索機能
+- カテゴリー別検索機能、キーワード検索機能
+- 「出品者を探す」機能
 - いいね機能
 - ユーザー詳細表示、編集機能
-- 一覧スライド表示機能
+- 横スクロール機能（サービス一覧、ユーザー一覧）
 
 # 工夫したポイント
-- 欲しいサービスを探しやすくするため、トップページからカテゴリ別に検索できるようにした。
+- 欲しいサービスを探しやすくするため、キーワード・カテゴリ別・出品者別に検索できるようにした。
 - 出品者のサービスの質の判断材料として、ユーザー詳細ページに出品者の販売実績とランク付けを実装した。
 
 # 使用技術（開発環境）
@@ -108,11 +108,11 @@ VSCode
 
 # 課題や今後実装したい機能
 ## 課題
-- 出品サービスを誤って削除してしまう恐れがある。
+- サービスの評価がないため、サービスの質がわかりにくい。
 - 出品者の情報が不十分。
 
 ## 今後実装したい機能
-- サービスを削除する際に確認用ダイアログを表示
+- サービスの評価機能
 - フォロー・フォロワー機能
 
 # ER図
