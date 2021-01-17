@@ -127,6 +127,19 @@
   transition: 0.1s;
 }
 
+.headuser-img-content {
+  position: relative;
+  margin: 0 1vw;
+}
+
+.headuser-box-img {
+  height: 42px;
+  width: 42px;
+  background-color: rgb(205, 202, 202);
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .user-nickname {
   text-decoration: none;
   line-height: 32px;
@@ -178,8 +191,8 @@
 .tooltip {
   display: none;
   position: absolute;
-  top: 19%;
-  right: 26%;
+  top: 20.5%;
+  right: 29.5%;
   padding: 5px 16px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;  
@@ -189,6 +202,7 @@
   font-size: 15px;
   opacity: 0.8;
 }
+
 .tooltip:before {
   position: absolute;
   bottom: 100%;
