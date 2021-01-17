@@ -6,7 +6,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5vh 0;
 }
 
 .item-box {
@@ -57,15 +56,19 @@
   padding-bottom: 3vh;
 }
 
-.side-show-main:hover {
-  opacity: 0.6;
-  transform: 0.1s;
-}
-
 .side-show-main>.heading {
   font-weight: bold;
   font-size: 20px;
   margin: 2vh 0;
+}
+
+.side-user-info {
+  display: inline-block;
+}
+
+.side-user-info:hover {
+  opacity: 0.6;
+  transform: 0.1s;
 }
 
 .side-img-content {

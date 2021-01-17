@@ -74,11 +74,46 @@
 .lists-left {
   display: flex;
   min-width: 200px;
+  max-width: 1200px;
 }
 
-.lists-left>li:hover {
-  opacity: 0.6;
+.lists-left>li {
+  max-width: calc(1200px/5);
+  position: relative;
+  padding: 5px;
+  display: block;
+}
+
+.left-list {
+  text-decoration: none;
+  line-height: 32px;
+  color: #333333;
+  font-weight: bold;
+}
+
+.left-list:hover {
+  opacity: 0.5;
   transition: 0.1s;
+}
+
+.dropdwn_menu {
+  width: 230%;
+  position: absolute;
+  background: #fff;
+  display: none;
+  z-index: 3;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.dropdwn_menu li a{
+  display: block;
+  padding:0 1vw;
+  line-height: 5vh;
+}
+
+.dropdwn_menu li a:hover {
+  background-color: #ea352d;
+  color: #fff;
 }
 
 .lists-right {
@@ -92,14 +127,25 @@
   transition: 0.1s;
 }
 
+.headuser-img-content {
+  position: relative;
+  margin: 0 1vw;
+}
+
+.headuser-box-img {
+  height: 42px;
+  width: 42px;
+  background-color: rgb(205, 202, 202);
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .user-nickname {
   text-decoration: none;
   line-height: 32px;
-  margin-right: 3vw;
   color: #333333;
   font-weight: bold;
 }
-
 
 .logout {
   text-decoration: none;
@@ -108,6 +154,7 @@
   border: 1px solid #DADDDC;
   border-radius: 5px;
   padding: 0 2vw;
+  margin-left: 3vw;
 }
 
 .guest-login {
@@ -141,14 +188,11 @@
   background-color: #3ccace;
 }
 
-span {
-  position:relative;
-}
 .tooltip {
   display: none;
   position: absolute;
-  top: 19%;
-  right: 26%;
+  top: 20.5%;
+  right: 29.5%;
   padding: 5px 16px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;  
@@ -158,6 +202,7 @@ span {
   font-size: 15px;
   opacity: 0.8;
 }
+
 .tooltip:before {
   position: absolute;
   bottom: 100%;

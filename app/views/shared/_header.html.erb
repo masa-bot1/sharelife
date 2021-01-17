@@ -14,12 +14,27 @@
   </div>
   <div class='nav'>
     <ul class='lists-left'>
-      <li><%= link_to '出品者を探す', '#', class: "user-nickname" %></li>
+      <li><%= link_to '出品者を探す', '#', class: "left-list" %>
+        <ul class="dropdwn_menu">
+          <% @categories.each do |category| %>
+            <li><%= link_to category.name, select_category_user_path(category.id) %></li>
+          <% end %>
+        </ul>
+      </li>
     </ul>
     <ul class='lists-right'>
       <% if user_signed_in? %>
-        <span><li><%= link_to current_user.nickname, user_path(current_user), class: "user-nickname" %></li></span>
-        <p class='tooltip'>マイページ</p>
+        <div class='headuser-img-content'>
+          <%= link_to user_path(current_user) do %>
+            <% if current_user.image.attached? %>
+              <%= image_tag current_user.image ,class:"headuser-box-img" %>
+            <% else %>
+              <%= image_tag "human-dummy.png" ,class:"headuser-box-img" %>
+            <% end %>
+          <% end %>
+        </div>
+        <%# <p class='tooltip'>マイページ</p> %>
+        <li><%= link_to current_user.nickname, user_path(current_user), class: "user-nickname" %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
       <% else %>
         <li><%= link_to 'ゲストログイン（閲覧用）', services_guest_sign_in_path, method: :post, class: "guest-login" %></li>
