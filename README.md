@@ -46,7 +46,7 @@ http://54.168.91.44
 [![Image from Gyazo](https://i.gyazo.com/0bea067d48633bfa988054eced5aef20.gif)](https://gyazo.com/0bea067d48633bfa988054eced5aef20)
 
 ### 「出品者を探す」機能
-[![Image from Gyazo](https://i.gyazo.com/eb463f9df97da6763bdee949b1ea7595.gif)](https://gyazo.com/eb463f9df97da6763bdee949b1ea7595)
+[![Image from Gyazo](https://i.gyazo.com/6cfd2543dffe583d8df1c73d3d040f11.gif)](https://gyazo.com/6cfd2543dffe583d8df1c73d3d040f11)
 
 ### 出品画面
 [![Image from Gyazo](https://i.gyazo.com/a99a6a70fc68e9b8e25763f0d7eb3695.gif)](https://gyazo.com/a99a6a70fc68e9b8e25763f0d7eb3695)
