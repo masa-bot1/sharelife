@@ -169,5 +169,8 @@
   position: relative;
 }
 
-
 /* /商品の概要 */
+
+.form-group-show {
+  display: flex;
+}
