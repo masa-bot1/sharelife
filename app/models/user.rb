@@ -13,7 +13,6 @@ class User < ApplicationRecord
   has_many :liked_services, through: :likes, source: :service
   has_one_attached :image
   has_many :posts
-  has_many :services, through: :posts
 
   validates :email, uniqueness: true
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
