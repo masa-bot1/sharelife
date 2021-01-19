@@ -10,6 +10,8 @@ class Service < ApplicationRecord
   has_one :order
   has_many :likes, dependent: :destroy
   has_many :liking_users, through: :likes, source: :user
+  has_many :posts
+  has_many :users, through: :posts
 
   with_options presence: true do
     validates :image

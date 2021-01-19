@@ -66,8 +66,12 @@ ActiveRecord::Schema.define(version: 2021_01_19_105813) do
     t.text "title", null: false
     t.text "content", null: false
     t.float "rate"
+    t.bigint "user_id", null: false
+    t.bigint "service_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["service_id"], name: "index_posts_on_service_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "services", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -108,5 +112,7 @@ ActiveRecord::Schema.define(version: 2021_01_19_105813) do
   add_foreign_key "addresses", "orders"
   add_foreign_key "orders", "services"
   add_foreign_key "orders", "users"
+  add_foreign_key "posts", "services"
+  add_foreign_key "posts", "users"
   add_foreign_key "services", "users"
 end
