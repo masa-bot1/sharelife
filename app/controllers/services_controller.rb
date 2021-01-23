@@ -26,6 +26,8 @@ class ServicesController < ApplicationController
     @services = @user.services
     @orders = Order.where(service_id: @services)
     @like = Like.new
+    @post = Post.new
+    @posts = @service.posts.includes(:user)
   end
 
   def edit
